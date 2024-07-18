@@ -23,14 +23,6 @@ const Favourites = () => {
     fetchProducts();
   }, []);
 
-  const handleSlideChange = () => {
-    console.log("slide change");
-  };
-
-  const handleSwiper = (swiper) => {
-    console.log(swiper);
-  };
-
   useEffect(() => {
     const breakpoint = window.matchMedia("(max-width: 768px)");
 
@@ -61,11 +53,9 @@ const Favourites = () => {
 
       <div className="all-favs">
         <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
+          spaceBetween={50} // Adjust as needed
+          slidesPerView={swiperDirection === 'vertical' ? 'auto' : 3} // Adjust based on direction
           direction={swiperDirection}
-          onSlideChange={handleSlideChange}
-          onSwiper={handleSwiper}
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>

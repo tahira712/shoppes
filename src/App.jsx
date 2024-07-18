@@ -16,7 +16,7 @@ import Trending from "./Pages/Trending";
 import ShareWithUs from "./Pages/ShareWithUs";
 import Blogs from "./Pages/Blogs";
 import Subscribe from "./Pages/Subscribe";
-import Footer from "./Footer";
+import Footer from "./Pages/Footer";
 function App() {
   return (
     <Router>

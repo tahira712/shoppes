@@ -29,15 +29,6 @@
         "category": "Men's Shoes",
         "name":"Nike Cap 2021"
 
-      },
-      {
-        "id": 4,
-        "title": "Product 3",
-        "description": "Description of Product 3.",
-        "price":" $ 39.99 ",
-        "image": "../public/images/Products/product4.png",
-        "category": "Men's Shoes",
-        "name":"Nike Air Max 2021"
       }
     ]
   }

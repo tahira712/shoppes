@@ -1,7 +1,6 @@
-import "swiper/css";import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-
+import "swiper/css";
 
 const Trending = () => {
   const [products, setProducts] = useState([]);
@@ -30,30 +29,33 @@ const Trending = () => {
       window.removeEventListener("resize", resizeListener);
     };
   }, []);
-async function fetchProducts() {
-  try {
-    const response = await fetch("./src/Pages/trending.json");
-    if (!response.ok) {
-      throw new Error('Failed to fetch products');
+
+  async function fetchProducts() {
+    try {
+      const response = await fetch("./src/Pages/trending.json");
+      if (!response.ok) {
+        throw new Error('Failed to fetch products');
+      }
+      const data = await response.json();
+      console.log(data);
+      setProducts(data.products);
+    } catch (error) {
+      console.error('Error fetching products:', error);
     }
-    const data = await response.json();
-    console.log(data);
-    setProducts(data.products);
-  } catch (error) {
-    console.error('Error fetching products:', error);
   }
-}
-useEffect(() => {
-  fetchProducts();
-},[])
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
     <div className="cont">
       <div className="trending">
         <h1 className="title">What’s Trending Now</h1>
         <div className="trending-swiper">
           <Swiper
-            spaceBetween={50}
-            slidesPerView={2}
+            spaceBetween={10} // Adjust as needed
+            slidesPerView={swiperDirection === 'vertical' ? 'auto' : 2} // Adjust based on direction
             direction={swiperDirection}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}

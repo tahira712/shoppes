@@ -12,8 +12,8 @@ import {
 
 export const Header = () => {
   return (
-    <div>
-         <header>
+    <div >
+         <header >
               <ul>
                 
                   <NavLink path to="/">
@@ -46,6 +46,25 @@ export const Header = () => {
                   </NavLink>
                 </li>
               </ul>
+              <ul className="links">
+            <li className="border">
+              <NavLink
+                className={({ isActive }) => (isActive ? "activeWhite" : "white")}
+                to="/"
+              >
+                <img src="../images/search.svg" alt="Search Icon" />
+                Search
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "activeWhite" : "white")}
+                to="/"
+              >
+                Log in
+              </NavLink>
+            </li>
+          </ul>
             </header>
     </div>
   )

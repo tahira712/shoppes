@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import "swiper/css"; // Import Swiper styles
 
 const Blogs = () => {
   const [swiperDirection, setSwiperDirection] = useState("horizontal");
@@ -56,8 +56,8 @@ const Blogs = () => {
         </div>
 
         <Swiper
-          spaceBetween={10}
-          slidesPerView={2}
+          spaceBetween={10} // Adjust as needed
+          slidesPerView={swiperDirection === 'vertical' ? 'auto' : 2} // Adjust based on direction
           direction={swiperDirection}
           breakpoints={{
             0: { slidesPerView: 1 },
