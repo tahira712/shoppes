@@ -1,0 +1,36 @@
+{
+    "blogs": [
+      {
+        "id": 1,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
+        "date":" 18/2/19 ",
+        "image": "../public/images/Blogs/Blog-1.png",
+        "authorName":"Cameron Williamson",
+        "authorImage":"../public/images/Blogs/author1.jpg"
+
+      },
+      {
+        "id": 2,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
+        "date":" 18/2/19 ",
+        "image": "../public/images/Blogs/Blog-2.png",
+           "authorName":"Cameron Williamson",
+        "authorImage":"../public/images/Blogs/author1.jpg"
+
+      },
+      {
+        "id": 3,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
+        "date":" 18/2/19 ",
+        "image": "../public/images/Blogs/Blog-3.png",
+          "authorName":"Cameron Williamson",
+        "authorImage":"../public/images/Blogs/author1.jpg"
+
+      }
+     
+    ]
+  }
+  

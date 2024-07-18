@@ -1,0 +1,40 @@
+{
+    "products": [
+      {
+        "id": 1,
+    
+        "image": "../public/images/Share/share1.png"
+
+      },
+      {
+        "id": 2,
+
+        "image": "../images/Share/share2.png"
+ 
+
+      },
+      {
+        "id": 3,
+        "image": "../images/Share/share3.png"
+
+      }
+      ,
+      {
+        "id": 4,
+        "image": "../images/Share/share4.png"
+      }
+      ,
+      {
+        "id": 5,
+
+        "image": "../images/Share/share5.png"
+     
+      }
+      ,
+      {
+        "id": 6,
+        "image": "../images/Share/share6.png"
+      }
+    ]
+  }
+  
