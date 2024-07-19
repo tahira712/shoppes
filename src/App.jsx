@@ -1,20 +1,19 @@
-import React from "react";
-import "./App.css";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  NavLink,
-} from "react-router-dom";
-import HomePage from "./Pages/HomePage";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Login from '../src/Pages/Login'; 
+import HomePage from '../src/Pages/HomePage'; // Adjust the path as per your project structure
 
-
-function App() {
+const App = () => {
   return (
-    <Router>
- <HomePage/>
+    <><Router>
+      <Routes>
+        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </Router>
+    {/* <HomePage/> */}
+    </>
+    
   );
-}
+};
 
 export default App;

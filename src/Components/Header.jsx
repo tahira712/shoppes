@@ -9,7 +9,19 @@ import {
 {
     useContext
 } from 'react'
-
+import BurgerMenu from './BurgerMenu';
+function openLogin() {
+  let overlay= document.querySelector('.overlay');
+  overlay.style.display = 'block';
+  let login= document.querySelector('.login');
+  login.style.display = 'block';
+}
+function closeLogin() {
+  let overlay= document.querySelector('.overlay');
+  overlay.style.display = 'none';
+  let login= document.querySelector('.login');
+  login.style.display = 'none';
+}
 export const Header = () => {
   return (
     <div >
@@ -50,20 +62,21 @@ export const Header = () => {
             <li className="border">
               <NavLink
                 className={({ isActive }) => (isActive ? "activeWhite" : "white")}
-                to="/"
+                to="/" 
               >
                 <img src="../images/search.svg" alt="Search Icon" />
-                Search
+               <span> Search</span>
               </NavLink>
             </li>
             <li>
               <NavLink
                 className={({ isActive }) => (isActive ? "activeWhite" : "white")}
-                to="/"
+                to="/"  onClick={() => {openLogin()}} onBlur={() => {closeLogin()}}
               >
                 Log in
               </NavLink>
             </li>
+              <BurgerMenu />
           </ul>
             </header>
     </div>

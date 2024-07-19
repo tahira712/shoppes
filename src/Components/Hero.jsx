@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import { Header } from "./Header";
 
@@ -139,7 +138,7 @@ const Hero = () => {
             alt="Nike Logo"
           />
 
-          <BurgerMenu />
+          {/* <BurgerMenu /> */}
         </div>
       </div>
     </div>
