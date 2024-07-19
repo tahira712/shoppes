@@ -32,7 +32,7 @@ const Trending = () => {
 
   async function fetchProducts() {
     try {
-      const response = await fetch("./src/Pages/trending.json");
+      const response = await fetch("./src/Components/trending.json");
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }

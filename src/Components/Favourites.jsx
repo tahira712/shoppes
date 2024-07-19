@@ -9,7 +9,7 @@ const Favourites = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("./src/Pages/favorites.json");
+        const response = await fetch("./src/Components/favorites.json");
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }

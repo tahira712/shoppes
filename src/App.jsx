@@ -7,16 +7,16 @@ import {
 } from "react-router-dom";
 import "./App.css";
 
-import Orders from "./Pages/Orders";
-import WhyChooseUs from "./Pages/WhyChooseUs";
-import Hero from "./Pages/Hero";
-import Favourites from "./Pages/Favourites";
-import Brands from "./Pages/Brands";
-import Trending from "./Pages/Trending";
-import ShareWithUs from "./Pages/ShareWithUs";
-import Blogs from "./Pages/Blogs";
-import Subscribe from "./Pages/Subscribe";
-import Footer from "./Pages/Footer";
+import Orders from "./Components/Orders";
+import WhyChooseUs from "./Components/WhyChooseUs";
+import Hero from "./Components/Hero";
+import Favourites from "./Components/Favourites";
+import Brands from "./Components/Brands";
+import Trending from "./Components/Trending";
+import ShareWithUs from "./Components/ShareWithUs";
+import Blogs from "./Components/Blogs";
+import Subscribe from "./Components/Subscribe";
+import Footer from "./Components/Footer";
 function App() {
   return (
     <Router>
