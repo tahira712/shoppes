@@ -16,12 +16,12 @@ function openLogin() {
   let login= document.querySelector('.login');
   login.style.display = 'block';
 }
-function closeLogin() {
-  let overlay= document.querySelector('.overlay');
-  overlay.style.display = 'none';
-  let login= document.querySelector('.login');
-  login.style.display = 'none';
-}
+// function closeLogin() {
+//   let overlay= document.querySelector('.overlay');
+//   overlay.style.display = 'none';
+//   let login= document.querySelector('.login');
+//   login.style.display = 'none';
+// }
 export const Header = () => {
   return (
     <div >
@@ -71,7 +71,7 @@ export const Header = () => {
             <li>
               <NavLink
                 className={({ isActive }) => (isActive ? "activeWhite" : "white")}
-                to="/"  onClick={() => {openLogin()}} onBlur={() => {closeLogin()}}
+                to="/"  onClick={() => {openLogin()}} 
               >
                 Log in
               </NavLink>
