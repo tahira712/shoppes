@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import BurgerMenu from "./BurgerMenu";
 import { Header } from "./Header";
-
+import { NavLink } from "react-router-dom";
 const Hero = () => {
-  const [selectedImage, setSelectedImage] = useState("../images/hero.png");
   const [quantityDropdownOpen, setQuantityDropdownOpen] = useState(false);
   const [sizeDropdownOpen, setSizeDropdownOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
-
+  
+  const [selectedImage, setSelectedImage] = useState("../images/hero.png");
   const handleImageClick = (imageSrc) => {
     setSelectedImage(imageSrc);
   };
@@ -96,7 +96,8 @@ const Hero = () => {
 
                   <div className="buttons">
                     <button>Add To Bag</button>
-                    <span className="see-details">See Details</span>
+                    <NavLink path to="/details/:4">                    <span className="see-details">See Details</span>
+                    </NavLink>
                   </div>
                 </div>
               </div>

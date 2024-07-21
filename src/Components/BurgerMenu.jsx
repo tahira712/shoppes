@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../Style/dropdown.css'; // Adjust path as per your project structure
 import Login from '../Pages/Login';
 
 const BurgerMenu = () => {

@@ -1,7 +1,7 @@
 {
     "products": [
       {
-        "id": 1,
+        "id": 4,
         "title": "Product 1",
         "description": "Description of Product 1.",
         "price":"$ 19.99 ",
@@ -11,7 +11,7 @@
 
       },
       {
-        "id": 2,
+        "id": 5,
         "title": "Product 2",
         "description": "Description of Product 2.",
         "price":" $ 29.99 ",
@@ -21,7 +21,7 @@
 
       },
       {
-        "id": 3,
+        "id": 6,
         "title": "Product 3",
         "description": "Description of Product 3.",
         "price":"$ 39.99",

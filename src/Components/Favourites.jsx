@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Import Swiper styles
-
+import { Link } from "react-router-dom";
 const Favourites = () => {
   const [swiperDirection, setSwiperDirection] = useState("horizontal");
   const [products, setProducts] = useState([]);
@@ -9,7 +9,7 @@ const Favourites = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("./src/Components/favorites.json");
+        const response = await fetch("/products.json");
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }
@@ -54,19 +54,21 @@ const Favourites = () => {
       <div className="all-favs">
         <Swiper
           spaceBetween={50} // Adjust as needed
-          slidesPerView={swiperDirection === 'vertical' ? 'auto' : 3} // Adjust based on direction
+          slidesPerView={swiperDirection === 'vertical' ? 'auto' : 4} // Adjust based on direction
           direction={swiperDirection}
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>
               <div className="favs">
                 <div className="product-description">
-                  <img src={product.image} alt={product.name} />
+                  <Link to={`/details/${product.id}`}>
+                  <img src={product.images[0]} alt={product.name} />
+                  </Link>
                 </div>
                 <div className="prod-desc">
                   <div className="prod-name-price">
                     <h3>{product.name}</h3>
-                    <span>{product.price}</span>
+                    <span>$ {product.price}</span>
                   </div>
                   <span className="prod-category">{product.category}</span>
                 </div>

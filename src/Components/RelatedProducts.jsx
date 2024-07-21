@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Link } from "react-router-dom";
 
-const Trending = () => {
+const RelatedPrdoducts = () => {
   const [products, setProducts] = useState([]);
   const [swiperDirection, setSwiperDirection] = useState("horizontal");
 
@@ -33,7 +33,7 @@ const Trending = () => {
 
   async function fetchProducts() {
     try {
-      const response = await fetch("/products.json");
+      const response = await fetch("../src/Components/trending.json");
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
@@ -56,18 +56,17 @@ const Trending = () => {
         <div className="trending-swiper">
           <Swiper
             spaceBetween={10} // Adjust as needed
-            slidesPerView={swiperDirection === 'vertical' ? 'auto' : 2} // Adjust based on direction
+            slidesPerView={swiperDirection === 'vertical' ? 'auto' : 4} 
             direction={swiperDirection}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >
-            {products.slice(4).map((product) => (
+            {products.map((product) => (
               <SwiperSlide key={product.id}>
                 <div className="trend">
                   <div className="product-description">
                   <Link to={`/details/${product.id}`}>
-
-                  <img src={product.images[0]} alt="" />
+                  <img src={product.image} alt="" />
                   </Link>
                   </div>
                   <div className="prod-desc">
@@ -87,4 +86,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default RelatedPrdoducts;

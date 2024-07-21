@@ -10,7 +10,6 @@ import Trending from "../Components/Trending";
 import ShareWithUs from "../Components/ShareWithUs";
 import Blogs from "../Components/Blogs";
 import Subscribe from "../Components/Subscribe";
-import Footer from "../Components/Footer";
 import Login from "./Login";
 const HomePage = () => {
   return (
@@ -25,7 +24,6 @@ const HomePage = () => {
       <ShareWithUs />
       <Blogs />
       <Subscribe />
-      <Footer />
     </div>
   );
 };

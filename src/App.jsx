@@ -1,16 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Login from '../src/Pages/Login'; 
-import HomePage from '../src/Pages/HomePage'; // Adjust the path as per your project structure
-
+import HomePage from '../src/Pages/HomePage'; 
+import { Header } from './Components/Header';
+import Footer from './Components/Footer';
+import Details from './Pages/Details';
 const App = () => {
   return (
-    <><Router>
+    < ><Router>
       <Routes>
-        {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/" element={<HomePage />} />
+        <Route path="/details/:id" element={<Details />} />
       </Routes>
+      <Footer />
     </Router>
-    {/* <HomePage/> */}
     </>
     
   );
