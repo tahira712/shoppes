@@ -9,6 +9,8 @@ const Login = () => {
     register.style.display = "block";
     let login = document.querySelector(".login");
     login.style.display = "none";
+    document.body.style.overflow = "hidden";
+  
   }
   function closeLogin() {
     let overlay = document.querySelector(".overlay");
@@ -32,6 +34,8 @@ const Login = () => {
     overlay.style.display = 'block';
     let login= document.querySelector('.login');
     login.style.display = 'block';
+    document.body.style.overflow = "hidden";
+   
 
   }
   function closeLogin() {
@@ -39,10 +43,11 @@ const Login = () => {
     overlay.style.display = 'none';
     let login= document.querySelector('.login');
     login.style.display = 'none';
+    document.body.classList.remove="overflow-hidden";
   }
   return (
     <div className="login-register">
-      <div className="login">
+      <div className="login" >
       <div className="close" onClick={closeLogin}><img src="../images/close.svg" alt="" /></div>
 
         <h3 className="title">Login</h3>
