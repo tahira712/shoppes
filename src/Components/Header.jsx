@@ -40,7 +40,7 @@ export const Header = () => {
       <header>
         <ul>
           <NavLink path to="/">
-            <img src="./images/logo.png" alt="" />
+            <img src="/images/logo.png" alt="" />
           </NavLink>
 
           <li>
@@ -75,9 +75,8 @@ export const Header = () => {
               className={({ isActive }) => (isActive ? "activeWhite" : "white")}
               to="/"
             >
-           
-                <img src="/images/search.svg" alt="" className="search" />
-             <img src="./images/search-black.svg" alt="" className="black" />
+              <img src="/images/search.svg" alt="" className="search" />
+              <img src="/images/search-black.svg" alt="" className="black" />
               <span> Search</span>
             </NavLink>
           </li>
@@ -92,7 +91,10 @@ export const Header = () => {
               <span>Login</span>
             </NavLink>
             <div className="shop-circle">
-              <img src={shopIcon} alt="" />
+              <img src={"/images/shop.svg"} alt="" />
+            </div>
+            <div className="shop-circle-black">
+              <img src={"/images/shop-black.svg"} alt="" />
             </div>
           </li>
           <BurgerMenu />

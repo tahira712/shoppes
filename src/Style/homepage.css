@@ -69,6 +69,42 @@ align-items: center;
 justify-content:center;
 margin-left: 10px;
 }
+.shop-circle-black{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+border: 1px solid #FFF;
+background: #f6f6f6;
+display: flex;
+align-items: center;
+justify-content:center;
+margin-left: 10px;
+}
+.hero .shop-circle-black{
+    display: none;
+}
+.hero .black{
+    display: none;
+}
+.details .black{
+    display: flex;
+}
+.details .shop-circle{
+    display: none;
+}
+.details .shop-circle-black{
+    display: flex;
+}
+.details-text h1.title{
+    margin-top: 0;
+    text-align: left;
+}
+.details .details-desc .details-text{
+    display: flex;
+  
+    flex-direction: column;
+    gap: 12px;
+}
 .shop{
     display: flex;
     align-items: center;
@@ -211,7 +247,7 @@ h1 {
 .select {
     width: 66px;
     height: 40px;
-    background-image: url('../public/images/select.png');
+    background-image: url('/images/select.png');
     padding-left: 15px;
     display: flex;
     align-items: center;
@@ -483,6 +519,11 @@ h1 {
         grid-template-columns: 1fr 1fr;
         grid-column:1/2;
         width: 50%;
+    }
+    .grid-col:nth-child(1){
+        grid-template-columns: 1fr 1fr;
+        grid-column:1/3;
+        width: 100%;
     }
     .grid-col:nth-child(3){
         grid-column:2/3;
@@ -808,6 +849,7 @@ h1.title {
     font-family: "Plus Jakarta Sans";
     font-size: 14px;
     font-weight: 500;
+    line-break:normal;
 }
 
 .prod-category {

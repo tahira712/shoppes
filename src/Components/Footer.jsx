@@ -51,9 +51,9 @@ const Footer = () => {
             </div>
             <span className="title-text">Follow our Social</span>
             <div className="social-media">
-                <div className="social"><img src="../images/Social/facebook.svg" alt="" /></div>
-                <div className="social"><img src="../images/Social/instagram.svg" alt="" /></div>
-                <div className="social"><img src="../images/Social/whatsapp.svg" alt="" /></div>
+                <div className="social"><img src="/images/Social/facebook.svg" alt="" /></div>
+                <div className="social"><img src="/images/Social/instagram.svg" alt="" /></div>
+                <div className="social"><img src="/images/Social/whatsapp.svg" alt="" /></div>
                
             </div>
           </div>

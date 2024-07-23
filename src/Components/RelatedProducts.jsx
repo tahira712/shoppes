@@ -3,9 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Link } from "react-router-dom";
 
-const RelatedPrdoducts = () => {
+const RelatedProducts = () => {
   const [products, setProducts] = useState([]);
   const [swiperDirection, setSwiperDirection] = useState("horizontal");
+  const [filterCategory, setFilterCategory] = useState(null); // State for dynamic filtering
 
   useEffect(() => {
     const breakpoint = window.matchMedia("(max-width: 768px)");
@@ -33,7 +34,7 @@ const RelatedPrdoducts = () => {
 
   async function fetchProducts() {
     try {
-      const response = await fetch("../src/Components/trending.json");
+      const response = await fetch("/products.json");
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
@@ -49,11 +50,15 @@ const RelatedPrdoducts = () => {
     fetchProducts();
   }, []);
 
+  const handleCategoryFilter = (category) => {
+    setFilterCategory(category);
+  };
+
   return (
     <div className="cont">
-      <div className="trending">
-        <h1 className="title">What’s Trending Now</h1>
-        <div className="trending-swiper">
+      <div className="related-products">
+        <h1 className="title">Related Products</h1>
+        <div className="related-swiper">
           <Swiper
             spaceBetween={10} // Adjust as needed
             slidesPerView={swiperDirection === 'vertical' ? 'auto' : 4} 
@@ -61,29 +66,40 @@ const RelatedPrdoducts = () => {
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >
-            {products.map((product) => (
-              <SwiperSlide key={product.id}>
-                <div className="trend">
-                  <div className="product-description">
-                  <Link to={`/details/${product.id}`}>
-                  <img src={product.image} alt="" />
-                  </Link>
-                  </div>
-                  <div className="prod-desc">
-                    <div className="prod-name-price">
-                      <h3>{product.name}</h3>
-                      <span>${product.price}</span>
+            {products.length > 0 ? (
+              products
+                .filter((product) => !filterCategory || product.category === filterCategory) // Dynamic filtering based on filterCategory
+                .map((product) => (
+                  <SwiperSlide key={product.id}>
+                    <div className="trend">
+                      <div className="product-description">
+                        <Link to={`/details/${product.id}`}>
+                          <img src={product.images[0]} alt="" />
+                        </Link>
+                      </div>
+                      <div className="prod-desc">
+                        <div className="prod-name-price">
+                          <h3>{product.name}</h3>
+                          <span>${product.price}</span>
+                        </div>
+                        <span className="prod-category">{product.category}</span>
+                      </div>
                     </div>
-                    <span className="prod-category">{product.category}</span>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                  </SwiperSlide>
+                ))
+            ) : (
+              <p>Loading...</p>
+            )}
           </Swiper>
+        </div>
+        <div className="filter-buttons">
+          <button onClick={() => handleCategoryFilter(null)}>All</button>
+          <button onClick={() => handleCategoryFilter('Electronics')}>Electronics</button>
+          <button onClick={() => handleCategoryFilter('Clothing')}>Clothing</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default RelatedPrdoducts;
+export default RelatedProducts;

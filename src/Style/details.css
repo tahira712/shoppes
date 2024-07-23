@@ -95,7 +95,7 @@ justify-content:center;
 }
 .sub-text{
     color: var(--Greyscale-Grey-70, #878690);
-text-align: right;
+/* text-align: right; */
 
 /* Body 16 */
 font-family: "Plus Jakarta Sans";
@@ -107,6 +107,9 @@ line-height: normal;
 .desc.sub-text{
     font-weight: 400;
     text-align: left;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid #f6f6f6;
 }
 .space-between{
     width: 100%;
@@ -141,5 +144,245 @@ width: 100% !important;
   }
   .details-desc{
     width: 100%;
+  }
+}
+
+
+.description-review{
+  width: 100%;
+height: 200px;
+  background-color: blue;
+}
+
+.desc-rev{
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    display: flex;
+   
+    gap: 20px;
+    & a{
+/* Heading 18 */
+color: var(--Main-Color-Black, #100D22);
+
+font-family: "Plus Jakarta Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    }
+    & a:active{
+      color: var(--Main-Color-Black, #100D22);
+
+    }
+}
+
+.review{
+  width: 100%;
+  height: 100%;
+ 
+  color: var(--Main-Color-Black, #100D22);
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 228.571% */
+  border-bottom: 1px solid  rgba(0, 0, 0, 0.09);
+padding: 10px 0
+  ;
+}
+.review-images{
+  display: flex;
+  align-items: center;
+  /* justify-content:center; */
+  width: 100%;
+  height: 100%;
+
+}
+.review-container{
+  width: 50%;
+}
+.sum{color: var(--Main-Color-Black, #100D22);
+
+  /* Heading 50 */
+  font-family: "Anton SC", sans-serif;
+  
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 124.537%; /* 62.269px */}
+.write-review{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 20px;
+}
+.star-review{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content:space-between; */
+}
+.text-rev{
+  color: var(--Main-Color-Black, #100D22);
+font-family: "Plus Jakarta Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.rating{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.btn-write{
+  width: 300px;
+  padding: 10px 20px;
+  height: 50px;
+  border-radius: 32px;
+background: var(--Greyscale-Grey-10, #F6F6F6);
+border: 0;
+color: var(--Main-Color-Black, #100D22);
+font-family: "Plus Jakarta Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.btn-submit{
+  display: block;
+}
+label{
+  color: var(--Main-Color-Black, #100D22);
+  font-weight: 600;
+font-family: "Plus Jakarta Sans";
+  
+}
+.details textarea{
+  resize: none;
+  height: 103px;
+  border: double 1px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #AB238F, #FE9D9B, #DF3295, #ff7770);
+  outline: 0;
+  padding: 13px;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  mask-composite: exclude;
+}
+.write-review-form div span.start{
+  font-size: 50px !important;
+}
+.write-review-form button{
+  width: 50%;
+  display: flex;
+align-self: center;
+  align-items: center;
+  justify-content:center;
+  gap: 20px;
+}
+.write-review-form{
+  display: none;
+  flex-direction: column;
+}
+.details form div{
+  width: 100%;
+  
+  & input{
+    width: 100%;
+    height: 40px;
+    border: double 1px transparent;
+    border-radius: 10px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #AB238F, #FE9D9B, #DF3295, #ff7770);
+    outline: 0;
+    padding: 13px;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    mask-composite: exclude;
+  }
+  
+}
+.related-products{
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 780px) {
+  .review-images{
+    flex-wrap: wrap;
+  }
+  .review-container{
+    width: 90%;
+  }
+  .write-review-form form .flex{
+    width: 100%;
+    flex-direction: column;
+  }
+  .review-container{
+    margin:0 auto ;
+  }
+  .write-review .rating,.btn-write{
+    width: 100%;
+  }
+}
+.review-image{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 20px;
+ & img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
+}
+.reviewer-image-name-star{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  /* background-color: #100D22; */
+  width: 100%;
+
+}
+
+.reviewer-image-name{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 12px;
+  color: var(--Main-Color-Black, #100D22);
+font-family: "Plus Jakarta Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.reviewer-image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* background-color: #f6f6f6; */
+  overflow: hidden;
+  /* object-fit: contain; */
+  & img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

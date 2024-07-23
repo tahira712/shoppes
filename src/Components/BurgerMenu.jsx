@@ -53,7 +53,7 @@ const BurgerMenu = () => {
     <div className='burger-menu'>
       <img
         className='burger'
-        src="./images/burger-menu.svg"
+        src="/images/burger-menu.svg"
         alt="Burger Menu"
         onClick={toggleMenu}
       />

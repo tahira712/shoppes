@@ -4,7 +4,8 @@ import { Header } from "../Components/Header";
 import "../Style/details.css";
 import RelatedProducts from "../Components/RelatedProducts";
 import { NavLink } from "react-router-dom";
-import { DescriptionsAndReviews } from "../Components/DescriptionsAndReviews";
+import  DescriptionAndReviews  from "../Components/DescriptionAndReviews";
+import RatingReview from "../Components/RatingReview";
 const Details = () => {
   const [quantityDropdownOpen, setQuantityDropdownOpen] = useState(false);
   const [sizeDropdownOpen, setSizeDropdownOpen] = useState(false);
@@ -25,7 +26,6 @@ const Details = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // istəsəz buranı async edərsiz xəta verməsin deyə
     const getData = () => {
       fetch("/products.json")
         .then((a) => a.json())
@@ -33,7 +33,7 @@ const Details = () => {
     };
     getData();
   }, [id]);
-
+  const [rating, setRating] = useState(0)
   const product = products.find((a) => a.id == id);
 
   const [selectedImageDet, setSelectedImage] = useState(product?.images[0]);
@@ -69,16 +69,23 @@ const Details = () => {
           </div>
         </div>
         <div className="details-desc">
-          <div>
+          <div className="details-text">
             <h1 className="title">{product?.title} </h1>
             <span className="sub-text">Men's Shoes</span>
             <div className="space-between">
               <span className="price">$ {product?.price}</span>
+              {product?.rating && (
+                <span className="rating">
+                  <RatingReview rating={product?.rating} setRating={setRating} />
+                </span>
+              )}
+              {/* <span><RatingReview rating={product?.rating} setRating={setRating} /></span> */}
             </div>
-          </div>
-          <div className="desc sub-text">
+            <div className="desc sub-text">
             <p>{product?.description}</p>
           </div>
+          </div>
+          
           <div className="cart-div">
             <div className="selects">
               <div
@@ -86,7 +93,7 @@ const Details = () => {
                 onClick={toggleQuantityDropdown}
               >
                 <span>QNT</span>
-                <img src="../images/down.svg" alt="" />
+                <img src="/images/down.svg" alt="" />
               </div>
               {quantityDropdownOpen && (
                 <div className="qty-dropdown">
@@ -99,7 +106,7 @@ const Details = () => {
 
               <div className="select select-size" onClick={toggleSizeDropdown}>
                 <span>SIZE</span>
-                <img src="../images/down.svg" alt="" />
+                <img src="/images/down.svg" alt="" />
               </div>
               {sizeDropdownOpen && (
                 <div className="size-dropdown">
@@ -113,22 +120,17 @@ const Details = () => {
 
             <div className="buttons">
               <button>Add To Bag</button>
-              
-                <button className="wishlist">
-                  <img src="/images/heart.svg" alt="" />{" "}
-                  <span>Add to Wishlist</span>
-                </button>
+
+              <button className="wishlist">
+                <img src="/images/heart.svg" alt="" />{" "}
+                <span>Add to Wishlist</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      {/* bütün məhsul datalarını bir json da yığsaz sizə daha asan olacaq */}
-      {/* {/*  bayaqdan nə vaxt fikir verəcəksiz deyə baxıram jdshgfjshd
-hahahaha
-      {/* <h1>Product Details</h1>
-            <h2>{product.name}</h2>
-            <p>{product.description}</p> */}
-      <DescriptionsAndReviews />
+
+      <DescriptionAndReviews />
       <RelatedProducts />
     </div>
   );
