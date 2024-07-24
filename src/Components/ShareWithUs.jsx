@@ -8,7 +8,7 @@ const ShareWithUs = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("/shareWithUs.json");
+        const response = await fetch("sharewithus.json");
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }
