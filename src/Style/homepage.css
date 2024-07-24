@@ -26,7 +26,7 @@
 .hero .right {
     width: 25%;
     height: 100%;
-    background-image: url("../public/images/right.png");
+    background-image: url("/images/right.png");
     background-repeat: no-repeat;
     position: absolute;
     background-size: cover;
