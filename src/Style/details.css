@@ -133,7 +133,21 @@ width: 100% !important;
       .details-images,.details-desc{
         width: 100%;
       }
-}
+      .swiper .swiper-wrapper {
+        flex-direction: column !important;
+    }
+    .swiper .swiper-wrapper .swiper-slide{
+      margin: 0 auto;
+
+    }
+    .trend{
+      width: 100%;
+    }
+  }
+  .product-description{
+    background-color: #f6f6f6;
+
+  }
 @media (max-width: 580px) {
   .details-images-desc{
     flex-direction: column;
@@ -317,7 +331,7 @@ align-self: center;
 }
 .related-products{
   flex-wrap: wrap;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 780px) {
