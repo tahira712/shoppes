@@ -92,11 +92,7 @@ const RelatedProducts = () => {
             )}
           </Swiper>
         </div>
-        <div className="filter-buttons">
-          <button onClick={() => handleCategoryFilter(null)}>All</button>
-          <button onClick={() => handleCategoryFilter('Electronics')}>Electronics</button>
-          <button onClick={() => handleCategoryFilter('Clothing')}>Clothing</button>
-        </div>
+      
       </div>
     </div>
   );
