@@ -5,9 +5,9 @@
         "title": "Lorem ipsum dolor sit amet",
         "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
         "date":" 18/2/19 ",
-        "image": "../public/images/Blogs/Blog-1.png",
+        "image": "  /images/Blogs/Blog-1.png",
         "authorName":"Cameron Williamson",
-        "authorImage":"../public/images/Blogs/author1.jpg"
+        "authorImage":"  /images/Blogs/author1.jpg"
 
       },
       {
@@ -15,9 +15,9 @@
         "title": "Lorem ipsum dolor sit amet",
         "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
         "date":" 18/2/19 ",
-        "image": "../public/images/Blogs/Blog-2.png",
+        "image": "  /images/Blogs/Blog-2.png",
            "authorName":"Cameron Williamson",
-        "authorImage":"../public/images/Blogs/author1.jpg"
+        "authorImage":"  /images/Blogs/author1.jpg"
 
       },
       {
@@ -25,9 +25,9 @@
         "title": "Lorem ipsum dolor sit amet",
         "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
         "date":" 18/2/19 ",
-        "image": "../public/images/Blogs/Blog-3.png",
+        "image": "  /images/Blogs/Blog-3.png",
           "authorName":"Cameron Williamson",
-        "authorImage":"../public/images/Blogs/author1.jpg"
+        "authorImage":"  /images/Blogs/author1.jpg"
 
       }
      
