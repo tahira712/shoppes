@@ -9,31 +9,31 @@
       {
         "id": 8,
 
-        "image": " /images/Share/share2.png"
+        "image": "/images/Share/share2.png"
  
 
       },
       {
         "id": 9,
-        "image": " /images/Share/share3.png"
+        "image": "/images/Share/share3.png"
 
       }
       ,
       {
         "id": 10,
-        "image": " /images/Share/share4.png"
+        "image": "/images/Share/share4.png"
       }
       ,
       {
         "id": 11,
 
-        "image": " /images/Share/share5.png"
+        "image": "/images/Share/share5.png"
      
       }
       ,
       {
         "id": 12,
-        "image": " /images/Share/share6.png"
+        "image": "/images/Share/share6.png"
       }
     ]
   }
