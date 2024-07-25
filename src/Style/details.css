@@ -300,6 +300,10 @@ font-family: "Plus Jakarta Sans";
 .write-review-form div span.start{
   font-size: 50px !important;
 }
+.reviewer-image-name-star div span.start{
+  font-size: 40px !important;
+}
+/* reduce font sizee */
 .write-review-form button{
   width: 50%;
   display: flex;

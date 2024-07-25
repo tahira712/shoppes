@@ -613,7 +613,16 @@ h1 {
         order: 2;
     }
 }
-
+@media (max-width: 300px) {
+    .burger-menu {
+        display: flex;
+       
+        width: 30px;
+    }
+}
+.share .product-description{
+    background-color: #fff;
+}
 @media (max-width: 594px) {
     .hero {
         height: 100% !important;
