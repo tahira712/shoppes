@@ -64,7 +64,7 @@ export const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink path to="/">
+            <NavLink path to="/blogs">
               Blogs
             </NavLink>
           </li>
@@ -73,7 +73,7 @@ export const Header = () => {
           <li className="border">
             <NavLink
               className={({ isActive }) => (isActive ? "activeWhite" : "white")}
-              to="/"
+              to="/search"
             >
               <img src="/images/search.svg" alt="" className="search" />
               <img src="/images/search-black.svg" alt="" className="black" />

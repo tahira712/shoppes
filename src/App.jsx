@@ -4,14 +4,18 @@ import { Header } from './Components/Header';
 import Footer from './Components/Footer';
 import Details from './Pages/Details';
 import Review from './Components/Review';
+import Blog from './Pages/Blog';
+// import { SearchProvider } from './Components/SearchContext';
 const App = () => {
   return (
     < ><Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/blogs" element={<Blog />} />
         <Route path="/details/:id" element={<Details />} />
         <Route path="/products/:id/description" element={<Details />}></Route>
         <Route path="/products/:id/review" element={<Details />}></Route>
+
       </Routes>
       <Footer />
     </Router>

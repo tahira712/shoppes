@@ -1,35 +1,106 @@
 {
     "blogs": [
       {
-        "id": 1,
+        "id": 16,
         "title": "Lorem ipsum dolor sit amet",
         "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
         "date":" 18/2/19 ",
         "image": "/images/Blogs/Blog-1.png",
-        "authorName":"Cameron Williamson",
-        "authorImage":"/images/Blogs/author1.jpg"
+        "authorName":"Ralph Edwards",
+        "authorImage":"/images/Blogs/author3.png",
+        "categories":"Sport, Design, Lifestyle"
 
       },
       {
-        "id": 2,
+        "id": 17,
         "title": "Lorem ipsum dolor sit amet",
         "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
         "date":" 18/2/19 ",
         "image": "/images/Blogs/Blog-2.png",
-           "authorName":"Cameron Williamson",
-        "authorImage":"/images/Blogs/author1.jpg"
+           "authorName":"Jake Sim",
+        "authorImage":"/images/Blogs/author2.png",
+        "categories":"Sport, Lifestyle"
 
       },
       {
-        "id": 3,
+        "id": 18,
         "title": "Lorem ipsum dolor sit amet",
         "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
         "date":" 18/2/19 ",
         "image": "/images/Blogs/Blog-3.png",
           "authorName":"Cameron Williamson",
-        "authorImage":"/images/Blogs/author1.jpg"
+        "authorImage":"/images/Blogs/author1.jpg",
+        "categories":"Sport, Design, Lifestyle"
+
+
+      },
+      {
+        "id": 19,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
+        "date":" 18/2/19 ",
+        "image": "/images/Blogs/Blog-1.png",
+        "authorName":"Ralph Edwards",
+        "authorImage":"/images/Blogs/author3.png",
+        "categories":"Sport, Design, Lifestyle"
+
+      },
+      {
+        "id": 20,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
+        "date":" 18/2/19 ",
+        "image": "/images/Blogs/Blog-2.png",
+           "authorName":"Jake Sim",
+        "authorImage":"/images/Blogs/author2.png",
+        "categories":"Sport, Lifestyle"
+
+      },
+      {
+        "id": 21,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
+        "date":" 18/2/19 ",
+        "image": "/images/Blogs/Blog-3.png",
+          "authorName":"Cameron Williamson",
+        "authorImage":"/images/Blogs/author1.jpg",
+        "categories":"Sport,Lifestyle"
+
+
+      },
+      {
+        "id": 22,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
+        "date":" 18/2/19 ",
+        "image": "/images/Blogs/Blog-1.png",
+        "authorName":"Ralph Edwards",
+        "authorImage":"/images/Blogs/author3.png",
+        "categories":"Sport, Design, Lifestyle"
+
+      },
+      {
+        "id": 23,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
+        "date":" 18/2/19 ",
+        "image": "/images/Blogs/Blog-2.png",
+           "authorName":"Jake Sim",
+        "authorImage":"/images/Blogs/author2.png",
+        "categories":"Sport, Lifestyle,Promo"
+
+      },
+      {
+        "id": 24,
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. ",
+        "date":" 18/2/19 ",
+        "image": "/images/Blogs/Blog-3.png",
+          "authorName":"Cameron Williamson",
+        "authorImage":"/images/Blogs/author1.jpg",
+        "categories":"Sport, Modern,Brand"
+
 
       }
-     
     ]
   }
