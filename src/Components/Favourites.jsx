@@ -48,7 +48,7 @@ const Favourites = () => {
   }, []);
 
   return (
-    <div className="cont">
+    <div className="cont"  data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
       <h2 className="title">Favourites on This Week</h2>
 
       <div className="all-favs">

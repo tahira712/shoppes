@@ -623,6 +623,9 @@ h1 {
 .share .product-description{
     background-color: #fff;
 }
+.subscribe input{
+    color: #fff;
+}
 @media (max-width: 594px) {
     .hero {
         height: 100% !important;

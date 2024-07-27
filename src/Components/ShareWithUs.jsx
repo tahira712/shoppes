@@ -24,7 +24,7 @@ const ShareWithUs = () => {
 
   return (
     <div className="cont">
-      <div className="share-with-us">
+      <div className="share-with-us" data-aos="fade-up" data-aos-offset="1000" data-aos-easing="ease-in-sine" data-aos-duration="1400">
         <h1 className="title">Share With #Shoppes</h1>
         <span className="sub">
           Follow <strong>@shoppes</strong> Instagram for inspirations

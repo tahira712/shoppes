@@ -3,7 +3,8 @@ import { Header } from "../Components/Header";
 import "../Style/blogs.css";
 import ReactPaginate from "react-paginate";
 import Search from '../Components/Search'; // Import the new component
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -41,7 +42,7 @@ const Blog = () => {
        
         <div className="blogs-all">
           {currentBlogs.map((blog, index) => (
-            <div key={index} className="blog">
+            <div key={index} className="blog" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
               <div className="blog-img">
                 <img src={blog.image} alt={blog.title} />
               </div>

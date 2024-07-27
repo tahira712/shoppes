@@ -73,11 +73,11 @@ export const Header = () => {
           <li className="border">
             <NavLink
               className={({ isActive }) => (isActive ? "activeWhite" : "white")}
-              to="/search"
+              // to="/search"
             >
               <img src="/images/search.svg" alt="" className="search" />
               <img src="/images/search-black.svg" alt="" className="black" />
-              <span> Search</span>
+              <span > Search</span>
             </NavLink>
           </li>
           <li className="shop">

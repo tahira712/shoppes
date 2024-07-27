@@ -20,7 +20,7 @@ export const Description = () => {
     <div>
       
       {products.filter((a) => a.id == id).map((a) => (
-          <div key={a.id} className="description">
+          <div key={a.id} className="description"  data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
             {a.description}
            
             </div>

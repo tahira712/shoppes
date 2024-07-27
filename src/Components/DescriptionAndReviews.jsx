@@ -24,7 +24,7 @@ const DescriptionAndReviews = () => {
   let reviewLength = review.map((a) => a.reviews.length);
   console.log(reviewLength);
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000">
       <div className="desc-rev">
         <Link to={`/products/${id}/description`}>
           <span className="desc-text">Description</span>

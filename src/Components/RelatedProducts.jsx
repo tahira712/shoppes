@@ -55,8 +55,8 @@ const RelatedProducts = () => {
   };
 
   return (
-    <div className="cont">
-      <div className="related-products">
+    <div className="cont" >
+      <div className="related-products" data-aos="fade-up" data-aos-offset="1000" data-aos-easing="ease-in-sine" data-aos-duration="600">
         <h1 className="title">Related Products</h1>
         <div className="related-swiper">
           <Swiper

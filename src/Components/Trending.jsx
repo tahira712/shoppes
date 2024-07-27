@@ -50,8 +50,8 @@ const Trending = () => {
   }, []);
 
   return (
-    <div className="cont">
-      <div className="trending">
+    <div className="cont" data-aos="fade-up" data-aos-offset="1000" data-aos-duration="1000">
+      <div className="trending"  >
         <h1 className="title">What’s Trending Now</h1>
         <div className="trending-swiper">
           <Swiper

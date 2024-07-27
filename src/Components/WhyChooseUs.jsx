@@ -3,7 +3,7 @@ import React from "react";
 const WhyChooseUs = () => {
   return (
     <div>
-      <div className="cont">
+      <div className="cont"  data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
         <h2 className="title">Why Choose Us</h2>
         <div className="shipping-payment-support">
           <div>

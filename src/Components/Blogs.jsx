@@ -48,7 +48,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="blogs">
+    <div className="blogs"  data-aos="fade-up" data-aos-offset="1000" data-aos-easing="ease-in-sine" data-aos-duration="1600">
       <div className="cont">
         <h1 className="title">Latest From Blogs</h1>
         <div className="sub">
@@ -69,8 +69,9 @@ const Blogs = () => {
         >
           {blogs.map((blog, index) => (
             <SwiperSlide key={index}>
-              <div className="blog">
-                <div className="blog-img">
+              <div className="blog"  >
+               
+                <div className="blog-img" >
                   <img src={blog.image} alt="" />
                 </div>
                 <div className="blog-description">
