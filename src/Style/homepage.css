@@ -485,7 +485,6 @@ h1 {
     font-size: 20px;
     font-weight: 500;
 }
-.burger-menu{display: none;}
 .dropdown {
     display: none;
     background-color: #fff;
@@ -548,14 +547,8 @@ h1 {
     .links li {
         display: none;
     }
-    .burger-menu {
-        display: flex !important;
-         /* position: absolute;
-        right: 20px;
-        top: 40px;  */
-         width: 30px !important; 
-       /* z-index: 99; */
-    } 
+   .burger-menu{display: none;}
+ 
     .images{
         order: 1;
     }
