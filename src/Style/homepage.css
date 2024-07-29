@@ -664,7 +664,7 @@ h1 {
 
 @media (min-width: 100px) and (max-width: 594px) {
     .burger-menu {
-        display: flex !important;
+        display: block !important;
         /* position: absolute;
        right: 20px;
        top: 40px;  */
