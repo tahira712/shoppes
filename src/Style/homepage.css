@@ -548,14 +548,14 @@ h1 {
     .links li {
         display: none;
     }
-    .burger-menu {
+    /* .burger-menu {
         display: flex !important;
         /* position: absolute;
         right: 20px;
         top: 40px; */
-        width: 30px !important;
+        /* width: 30px !important; */
         /* z-index: 99; */
-    }
+    /* }  */
     .images{
         order: 1;
     }
