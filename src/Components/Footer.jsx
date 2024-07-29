@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       <div className="cont">
-        <footer  data-aos="fade-up" data-aos-offset="1200" data-aos-easing="ease-in-sine" data-aos-duration="800">
+        <footer  data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="800">
           <div className="grid-col">
             <img src="../images/logo.png" alt="" />
             <div className="info">
