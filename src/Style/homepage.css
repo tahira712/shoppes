@@ -485,6 +485,7 @@ h1 {
     font-size: 20px;
     font-weight: 500;
 }
+.burger-menu{display: none;}
 .dropdown {
     display: none;
     background-color: #fff;
@@ -547,8 +548,14 @@ h1 {
     .links li {
         display: none;
     }
-   .burger-menu{display: none;}
- 
+    .burger-menu {
+        display: flex !important;
+         /* position: absolute;
+        right: 20px;
+        top: 40px;  */
+         width: 30px !important; 
+       /* z-index: 99; */
+    } 
     .images{
         order: 1;
     }
@@ -655,15 +662,14 @@ h1 {
     }
 }
 
-@media (max-width: 515px) {
+@media (max-width: 300px) {
     .burger-menu {
         display: flex !important;
         width: 30px !important;
-        /* Check if position or z-index issues exist */
-        position: absolute;
-        right: 20px;
-        top: 40px;
-        z-index: 99;
+     
+    }
+    body{
+        background-color: #100D22;
     }
 }
 
