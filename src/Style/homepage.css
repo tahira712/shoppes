@@ -662,20 +662,7 @@ h1 {
     }
 }
 
-@media (min-width: 100px) and (max-width: 594px) {
-    .burger-menu {
-        display: block !important;
-        /* position: absolute;
-       right: 20px;
-       top: 40px;  */
-        width: 30px !important; 
-      /* z-index: 99; */
-     
-    }
-    body{
-        background-color: #100D22;
-    }
-}
+
 
 .share .product-description{
     background-color: #fff;
