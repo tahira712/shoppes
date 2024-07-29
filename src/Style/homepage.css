@@ -662,7 +662,7 @@ h1 {
     }
 }
 
-@media (max-width: 300px) {
+@media (min-width: 100px) and (max-width: 594px) {
     .burger-menu {
         display: flex !important;
         width: 30px !important;
