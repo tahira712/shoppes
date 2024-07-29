@@ -615,7 +615,7 @@ h1 {
 }
 @media (max-width: 300px) {
     .burger-menu {
-        display: flex;
+        display: flex !important;
        
         width: 30px;
     }
@@ -647,6 +647,11 @@ h1 {
         /* width: 80%; */
         height: 15vh;
         
+    }
+    .burger-menu {
+        display: flex !important;
+       
+        width: 30px;
     }
     .border-left {
         display: none;
