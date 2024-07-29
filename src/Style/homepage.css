@@ -549,11 +549,11 @@ h1 {
         display: none;
     }
     .burger-menu {
-        display: flex;
+        display: flex !important;
         /* position: absolute;
         right: 20px;
         top: 40px; */
-        width: 30px;
+        width: 30px !important;
         /* z-index: 99; */
     }
     .images{
