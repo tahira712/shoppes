@@ -2,9 +2,9 @@ import React from 'react'
 
 const Subscribe = () => {
   return (
-    <div>
+    <div  data-aos="fade-up" data-aos-offset="900" data-aos-easing="ease-in-sine" data-aos-duration="1800">
 <div className="cont">
-    <div className="subscribe" data-aos="fade-up" data-aos-offset="900" data-aos-easing="ease-in-sine" data-aos-duration="1800">
+    <div className="subscribe">
 
 
       <div className="overlay-text">Subscribe Now </div>

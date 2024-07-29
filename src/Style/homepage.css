@@ -648,11 +648,11 @@ h1 {
         height: 15vh;
         
     }
-    .burger-menu {
+    /* .burger-menu {
         display: flex !important;
        
         width: 30px;
-    }
+    } */
     .border-left {
         display: none;
     }
