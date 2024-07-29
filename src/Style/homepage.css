@@ -485,7 +485,6 @@ h1 {
     font-size: 20px;
     font-weight: 500;
 }
-.burger-menu{display: none;}
 .dropdown {
     display: none;
     background-color: #fff;
@@ -556,6 +555,8 @@ h1 {
          width: 30px !important; 
        /* z-index: 99; */
     } 
+.burger-menu{display: none;}
+
     .images{
         order: 1;
     }
@@ -661,9 +662,7 @@ h1 {
         height: 40%;
     }
 }
-
-@media (min-width: 100px) and (max-width: 600px) {
-    .burger-menu {
+.burger-menu {
         display: flex !important;
         /* position: absolute;
        right: 20px;
@@ -672,8 +671,7 @@ h1 {
       /* z-index: 99; */
      
     }
-   
-}
+
 
 .share .product-description{
     background-color: #fff;
