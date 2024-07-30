@@ -39,6 +39,9 @@
     height: 100vh;
     opacity: 0.2;
 }
+.detail-blog header .links ul li span{
+    color: #000;
+}
 
 header {
     width: 100%;
@@ -50,6 +53,7 @@ header {
     justify-content: space-between;
     font-family: "Plus Jakarta Sans";
     font-size: 14px;
+    padding-bottom: 10px;
   
 }
 .details header ul li span{
@@ -550,12 +554,9 @@ h1 {
     }
     .burger-menu {
         display: flex !important;
-         /* position: absolute;
-        right: 20px;
-        top: 40px;  */
+      
          width: 30px !important; 
-       /* z-index: 99; */
-    } 
+    }  
 
     .images{
         order: 1;
@@ -620,9 +621,7 @@ h1 {
         height: 100% !important;
     }
    
-    .links {
-        display: none;
-    }
+  
     .overlay-text {
         display: none;
     }
@@ -639,11 +638,8 @@ h1 {
     }
     .burger-menu {
         display: flex !important;
-         /* position: absolute;
-        right: 20px;
-        top: 40px;  */
+      
          width: 30px !important; 
-       /* z-index: 99; */
     } 
     .border-left {
         display: none;
@@ -662,15 +658,6 @@ h1 {
         height: 40%;
     }
 }
-.links .burger-menu {
-        display: flex !important;
-        /* position: absolute;
-       right: 20px;
-       top: 40px;  */
-        width: 30px !important; 
-      /* z-index: 99; */
-     
-    }
 
 
 .share .product-description{
@@ -996,7 +983,7 @@ p.blog-desc {
     font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 8px;
 }
 

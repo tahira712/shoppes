@@ -5,6 +5,8 @@ import ReactPaginate from "react-paginate";
 import Search from '../Components/Search'; // Import the new component
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link, useParams } from "react-router-dom";
+import { useResolvedPath } from "react-router-dom";
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -34,7 +36,9 @@ const Blog = () => {
   const handlePageChange = (event) => {
     setCurrentPage(event.selected);
   };
-
+  let pathName = useResolvedPath();
+  let pathURL = pathName.pathname;
+  console.log(pathURL);
   return (
     <div className="cont blogs-cont">
       <Header />
@@ -42,6 +46,7 @@ const Blog = () => {
        
         <div className="blogs-all">
           {currentBlogs.map((blog, index) => (
+            <Link to={`/blogs/${blog.id}`}>
             <div key={index} className="blog" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
               <div className="blog-img">
                 <img src={blog.image} alt={blog.title} />
@@ -60,9 +65,12 @@ const Blog = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div></Link>
           ))}
         </div>
+{
+
+}
         <Search
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}

@@ -1,4 +1,5 @@
 import React, { useEffect ,useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const RecentPost = () => {
     let [recent, setRecent] = useState([]);
@@ -13,7 +14,8 @@ const RecentPost = () => {
         <label>Recent Posts</label>
             {
                 recent.slice(0, 4).map((a) => (
-                    <div className="recent-post">
+                    <Link to={`/blogs/${a.id}`}>
+                        <div className="recent-post">
                         <div className="recent-post-img">
                             <img src={a.image} alt="" />
                         </div>
@@ -21,7 +23,7 @@ const RecentPost = () => {
                             <h3 className='blog-title'>{a.title}</h3>
                             <span className=" date">Jan 14, 2022</span>
                         </div>
-                    </div>
+                    </div></Link>
                 ))
             }
             
