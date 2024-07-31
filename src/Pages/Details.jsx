@@ -54,7 +54,7 @@ const Details = () => {
               />
             )}
           </div>
-          <div className="details-images-small" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1400">
+          <div className="details-images-small">
             {product?.images &&
               product.images.map((image, index) => (
                 <div className="details-image-small">
@@ -68,7 +68,7 @@ const Details = () => {
               ))}
           </div>
         </div>
-        <div className="details-desc" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="100">
+        <div className="details-desc" data-aos="fade-up" >
           <div className="details-text">
             <h1 className="title">{product?.title} </h1>
             <span className="sub-text">Men's Shoes</span>
@@ -86,7 +86,7 @@ const Details = () => {
           </div>
           </div>
           
-          <div className="cart-div" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+          <div className="cart-div" >
             <div className="selects">
               <div
                 className="select select-quantity"
