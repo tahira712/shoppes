@@ -6,6 +6,7 @@ import Blog from "./Pages/Blog";
 import DetailBlog from "./Pages/DetailBlog";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import the CSS
+import Shop from "./Pages/Shop";
 // import { SearchProvider } from './Components/SearchContext';
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/products/:id/review" element={<Details />}></Route>
           {/* <Route path="/search" element={<Search />}></Route> */}
           <Route path="/blogs/:id" element={<DetailBlog />}></Route>
+          <Route path="/shop" element={<Shop />} />
         </Routes>
         <Footer />
       </Router>

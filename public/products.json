@@ -11,6 +11,7 @@
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f8c3ac46-6e48-4fad-a43d-7b01f2bdad09/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2e55231e-010e-4316-8653-36e2c66d2201/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png"
       ],
+      "color": "#e2dddd",
       "rating": 4,
       "category": "Men's Shoes",
       "name": "Nike Air Max INTRLK",
@@ -35,6 +36,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
       "price": "29.99",
       "rating": 4,
+      "color": "#100D22",
       "images": [
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9f79fa8d-3a58-44ce-b823-c6936ccc65fc/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a5265394-2f00-4e7e-a263-f9b9d78ee736/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
@@ -62,6 +64,7 @@
       "id": 6,
       "title": "Product 3",
       "rating": 4,
+      "color": "#100D22",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
       "price": "39.99",
       "images": [
@@ -71,8 +74,7 @@
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1867b67d-fd84-4946-ab2e-78b78c116f50/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png"
       ],
       "category": "Men's Shoes",
-      "userNames":["Ralph Edwards","Kristen Watson"]
-      ,
+      "userNames": ["Ralph Edwards", "Kristen Watson"],
       "reviews": [
         {
           "userName": "Ralph Edwards",
@@ -86,25 +88,26 @@
           "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
           "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
         }
-      ]
-      ,
+      ],
       "name": "Nike Air Max 2021"
     },
     {
       "id": 13,
       "title": "Product 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+      "color": "#5848CA",
+
       "price": "19.99",
       "images": [
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/be3c008a-80a9-40bf-9d6d-ec41c1bc5707/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/114ca3ff-3f45-4a64-823b-8d47523a2ebf/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/be3c008a-80a9-40bf-9d6d-ec41c1bc5707/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
-        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/50f804fb-9be8-4dec-9138-e5e878328434/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png"
+        "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/926166a1-76d1-4813-b57c-c6566f8ded06/cortez-textile-shoes-BBsbWq.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/16bf737c-a4d4-4bab-a9ef-5b50fbe7ca32/NIKE+CORTEZ.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/97af0e98-d325-4a34-bce7-e1860c9f0545/NIKE+CORTEZ.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/aef617db-eb8a-4c99-8c36-bb3ecd12595b/NIKE+CORTEZ.png"
       ],
       "category": "Men's Shoes",
       "name": "Nike Air Max INTRLK",
       "rating": 4,
-      "userNames":["Ralph Edwards","Kristen Watson"],
+      "userNames": ["Ralph Edwards", "Kristen Watson"],
       "reviews": [
         {
           "userName": "Ralph Edwards",
@@ -124,7 +127,7 @@
       "id": 14,
       "title": "Product 2",
       "rating": 4,
-
+      "color": "#BA4164",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
       "price": "29.99",
       "images": [
@@ -154,7 +157,7 @@
       "id": 15,
       "title": "Product 3",
       "rating": 4,
-
+      "color": "#aba7a7",
       "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
       "price": "39.99",
       "images": [
@@ -179,7 +182,307 @@
       ],
       "category": "Women's Shoes",
       "name": "Nike Metcon 9"
-    
+    },
+    {
+      "id": 25,
+      "title": "Product 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+      "color": "#A8BD84",
+      "price": "19.99",
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/be3c008a-80a9-40bf-9d6d-ec41c1bc5707/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/114ca3ff-3f45-4a64-823b-8d47523a2ebf/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/be3c008a-80a9-40bf-9d6d-ec41c1bc5707/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/114ca3ff-3f45-4a64-823b-8d47523a2ebf/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png"
+      ],
+      "category": "Men's Shoes",
+      "name": "Nike Air Max INTRLK",
+      "rating": 4,
+      "userNames": ["Ralph Edwards", "Kristen Watson"],
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Product 2",
+      "rating": 4,
+      "color": "#BA4164",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+      "price": "29.99",
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/57fbdd99-6beb-4b8d-93e8-3abf72b67fb6/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8ede5b78-232f-4f8f-8293-be927a13837a/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5a6a8d69-aedf-4ca4-9d23-743dd66fad57/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/454ba4bd-ab73-4a3d-8d23-dfc8ffd8c549/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png"
+      ],
+      "category": "Men's Shoes",
+      "name": "Nike Air Max Alpha Trainer",
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Product 3",
+      "rating": 4,
+      "color": "#aba7a7",
+      "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
+      "price": "39.99",
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5bdf04f2-feee-4120-8a38-1d26d50d8ab8/metcon-9-womens-workout-shoes-KJtnxM.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3b3f282d-7fb3-4cf3-9d7a-b582d080901d/metcon-9-womens-workout-shoes-KJtnxM.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1f85b2d8-0378-4dbf-8372-7a4cc1999995/metcon-9-womens-workout-shoes-KJtnxM.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ba8aa6d4-46d0-469b-b270-0a083ad6a2a0/metcon-9-womens-workout-shoes-KJtnxM.png"
+      ],
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ],
+      "category": "Women's Shoes",
+      "name": "Nike Metcon 9"
+    },
+    {
+      "id": 28,
+      "title": "Product 3",
+      "rating": 4,
+      "color": "#aba7a7",
+      "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
+      "price": "39.99",
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a06ff808-e89b-4b1b-b3bb-fa03c0f863a8/M+NK+DF+NGC+JACKET.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d56366c4-22df-4256-ba55-2cd275c76949/M+NK+DF+NGC+JACKET.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d97dc48f-80f7-4720-9118-134a96a19cfb/M+NK+DF+NGC+JACKET.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/548e2dc4-ed87-46fd-831f-3a33c72b9925/M+NK+DF+NGC+JACKET.png"
+      ],
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ],
+      "category": " Clothing",
+      "name": "Nike Golf "
+    },
+    {
+      "id": 29,
+      "title": "Product 3",
+      "rating": 4,
+      "color": "#100D22",
+      "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
+      "price": "39.99",
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bfea08a3-0d7d-4a02-aacb-3f113d089de0/USAB+M+NK+TEE+MNS+PLYR+NN+QS.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0a5031f4-a89b-4666-9b41-425298182e11/USAB+M+NK+TEE+MNS+PLYR+NN+QS.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bfea08a3-0d7d-4a02-aacb-3f113d089de0/USAB+M+NK+TEE+MNS+PLYR+NN+QS.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0a5031f4-a89b-4666-9b41-425298182e11/USAB+M+NK+TEE+MNS+PLYR+NN+QS.png"
+      ],
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ],
+      "category": " Clothing",
+      "name": "Nike Shirt"
+    },
+    {
+      "id": 33,
+      "title": "Product 3",
+      "rating": 4,
+      "color": "#56A1AD",
+      "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
+      "price": "39.99",
+      "images": [
+        "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/58c378f6-b26f-477d-aaf4-c8dec0e64f97/hayward-backpack-26l-1wD06c.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f7f00f15-2232-405d-988b-1ab8c0cf0f1b/NK+HAYWARD+BKPK.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7d991033-3ae6-44cc-acc2-434e5e76371a/NK+HAYWARD+BKPK.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/29ce920e-d2bd-4279-bb4f-83b6ee0f4945/NK+HAYWARD+BKPK.png"
+      ],
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ],
+      "category": "Accessories",
+      "name": "Nike Backpack"
+    },
+    {
+      "id": 37,
+      "title": "Product 3",
+      "rating": 4,
+      "color": "#100D22",
+      "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
+      "price": "39.99",
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/93ce98eb-0fd6-43dc-be13-9bcef2c0f96d/HIKE+NIKE+DUFFEL.png",
+        "https://static.nike.com/a/images/t_default/fbb6b869-cf24-443e-aa11-e5ba9ecdcfe0/HIKE+NIKE+DUFFEL.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6de9297d-dc83-45bd-9b33-f23193c9ce03/HIKE+NIKE+DUFFEL.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fc6952ea-9e74-493c-90da-ffa45c612268/HIKE+NIKE+DUFFEL.png"
+      ],
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ],
+      "category": "Accessories",
+      "name": "Nike Duffel Bag"
+    },
+    {
+      "id": 30,
+      "title": "Product 3",
+      "rating": 4,
+      "color": "#A8BD84",
+      "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
+      "price": "39.99",
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/80a4ee78-aeeb-403b-8e6f-961a35354127/NK+ELMNTL+PRM+CRSSBDY.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ae24cac3-1799-4001-ba31-90a434d38361/NK+ELMNTL+PRM+CRSSBDY.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ae24cac3-1799-4001-ba31-90a434d38361/NK+ELMNTL+PRM+CRSSBDY.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/048cd3c3-61e0-4bb8-a2bb-475d8b50793b/NK+ELMNTL+PRM+CRSSBDY.png"
+      ],
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ],
+      "category": "Accessories",
+      "name": "Nike Crossbody Bag"
+    },
+    {
+      "id": 31,
+      "title": "Product 3",
+      "rating": 4,
+      "color": "#e2dddd",
+      "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
+      "price": "39.99",
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/45bd1014-b212-419b-a8cd-7dfb25bd4d34/K+NSW+TEE+MASSEUSE+QS.png",
+        "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c2eb0ff9-4e6e-4d13-bf7a-09ef3b70460b/womens-t-shirt-fjhSjj.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/45bd1014-b212-419b-a8cd-7dfb25bd4d34/K+NSW+TEE+MASSEUSE+QS.png",
+        "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c2eb0ff9-4e6e-4d13-bf7a-09ef3b70460b/womens-t-shirt-fjhSjj.png"
+      ],
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ],
+      "category": " Clothing",
+      "name": "Nike Shirt"
+    },
+    {
+      "id": 32,
+      "title": "Product 3",
+      "rating": 4,
+      "color": "#e2dddd",
+      "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
+      "price": "39.99",
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/52f75f77-61c2-41af-b9df-5487e71ad834/K+NK+DF+LS+JSY+GFA+CAPSULE.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7e599f80-856d-4446-ad19-40e2d28fcb18/K+NK+DF+LS+JSY+GFA+CAPSULE.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0f260f9b-734b-4d8e-9a91-26ec58b71ab9/K+NK+DF+LS+JSY+GFA+CAPSULE.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c6411169-2f58-4186-94fe-b0764a7bac41/K+NK+DF+LS+JSY+GFA+CAPSULE.png"
+      ],
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ],
+      "category": " Clothing",
+      "name": "Nike Shirt"
     }
   ]
 }

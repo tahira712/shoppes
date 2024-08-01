@@ -70,7 +70,7 @@ const Details = () => {
         </div>
         <div className="details-desc" data-aos="fade-up" >
           <div className="details-text">
-            <h1 className="title">{product?.title} </h1>
+            <h1 className="title">{product?.name} </h1>
             <span className="sub-text">Men's Shoes</span>
             <div className="space-between">
               <span className="price">$ {product?.price}</span>
