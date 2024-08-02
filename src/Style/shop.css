@@ -1,7 +1,10 @@
 .shop-cont header ul li span{
     color: #100D22 !important;
 }
-
+*{
+    font-family: "Plus Jakarta Sans";   
+    
+}
 .shop-container{
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -41,10 +44,46 @@ display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(2, 1fr);
 gap: 20px;
+padding: 40px 0;
     width: 100%;
     height: 100%;
-    margin-top: 20px;
    
+}
+
+.product-details{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.filters{
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+span .close-button{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: translate(0, -2px);
+    width: 20px;
+}
+.filters span:hover .close-button{
+    visibility: visible;
+    opacity: 1;
+}
+.filters span{
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid var(--Greyscale-Grey-70, #878690);
+    padding: 4px 6px;
+    color: var(--Greyscale-Grey-70, #878690);
+    position: relative;
+font-family: "Plus Jakarta Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
 }
 .product-item{
 width: 100%;
@@ -67,9 +106,20 @@ font-family: "Plus Jakarta Sans";
     height: 300px;
     object-fit: contain;
 }
+.close-button{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    color: #100D22;
+    font-size: 20px;
+}
+.active{
+    display: flex;
+}
+.filter
 .product-details{
 padding:0 9px;
-height: 50px;
+height: 55px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -95,8 +145,18 @@ font-weight: 800;
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
+.filter-toggle-btn{
+    display: none;
+  
+}
 @media (max-width: 990px) {
+    .no-product img {
+        position: absolute;
+        top: 0px;
+    }
+    .all-products{
+        padding: 100px 0;
+    }
     .shop-container{
         grid-template-columns: 1fr;
     }
@@ -110,12 +170,17 @@ font-weight: 800;
     flex-wrap: wrap;
     padding-bottom: 40px;
    }
+  
    .filter-toggle-btn{
     display: flex !important;
+   
    }
-   .shop-filter.close-filter{
-    display: none;
-   }
+  .filter-toggle-btn.active,
+  .close-filter{
+    position: absolute;
+    top: 100px;
+    right: 0px
+  }
  
 }
 .sort-by-container{
@@ -174,6 +239,10 @@ input::-webkit-inner-spin-button {
     align-items: center;
     justify-content: flex-end;
     display: none;
+    font-family: "Plus Jakarta Sans";   
+    font-size: 16px;
+    font-weight: 800;
+    color: #100D22;
 }
 .close-filter{
     display: none;
@@ -204,4 +273,9 @@ justify-content: center;
 position: absolute;
 top: 0;
 left: 0;
+}
+
+
+.filters{
+    position: absolute;
 }

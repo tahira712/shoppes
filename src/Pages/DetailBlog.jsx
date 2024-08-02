@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import WriteReview from "../Components/WriteReview";
 
 import WriteComment from "../Components/WriteComment";
+import RecentPost from "../Components/RecentPost";
 const DetailBlog = () => {
   let { id } = useParams();
   async function fetchData() {
@@ -80,7 +81,7 @@ const DetailBlog = () => {
 
           <WriteComment />
         </div>
-        <Search />
+    <RecentPost/>
       </div>
     </div>
   );

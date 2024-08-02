@@ -8,7 +8,7 @@ import PriceRange from "../Components/PriceRange";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const [priceRange, setPriceRange] = useState([0, 2000]); // Initialize price range
+  const [priceRange, setPriceRange] = useState([0, 2000]); 
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [category, setCategory] = useState("All");
   const [color, setColor] = useState("All");
@@ -20,7 +20,7 @@ const Shop = () => {
       .then((response) => response.json())
       .then((data) => {
         setProducts(data.products);
-        setFilteredProducts(data.products); // Initialize filtered products
+        setFilteredProducts(data.products); 
       });
   }, []);
 
@@ -61,16 +61,43 @@ const Shop = () => {
     setColor(newColor);
   };
 
+  const handleResetFilters = () => {
+    setCategory("All");
+    setColor("All");
+    setPriceRange([0, 2000]);
+    setFilteredProducts(products);
+  };
+
+  const handleClearFilters = () => {
+    setFilteredProducts(products);
+    setCategory("All");
+    setColor("All");
+    setPriceRange([0, 2000]);
+  };
+let resetCategory=()=>{
+  setCategory("All");
+}
+let resetColor=()=>{
+  setColor("All");
+  let colorSpan = document.querySelectorAll(".filter-color");
+  
+}
   const openFilter = () => {
     document.querySelector(".shop-filter").classList.toggle("close-filter");
+    
   }
-
+let resetPriceRange=()=>{
+  setPriceRange([0, 2000]);
+ 
+}
+const screenWidth = window.innerWidth;
   return (
     <div className="cont shop-cont">
       <Header />
-      <span onClick={openFilter} className="filter-toggle-btn">Sort by :</span> 
+      <span onClick={openFilter} className={screenWidth < 990 ? ".filter-toggle-btn.close-filter" : ".filter-toggle-btn.active"}>Sort by :</span> 
+ 
       <div className="shop-container">
-        <div className="shop-filter">
+        <div className="shop-filter " >
           <h1 className="filter-title">All Products ({filteredProducts.length})</h1>
           <div className="shop-category">
             <span className="filter-title">Categories</span>
@@ -96,6 +123,19 @@ const Shop = () => {
           </div>
         </div>
         <div className="all-products">
+          <div className="filters">
+            <span className="filter-category"> {category} ({products.filter(p => p.category.includes(category)).length}) 
+              <img onClick={resetCategory} className="close-button" src="./images/Close.png" alt="Clear Filters" />
+            </span>
+            <span className="filter-price"> $ {priceRange[0]} - $ {priceRange[1]}
+            <img onClick={resetPriceRange} className="close-button" src="./images/Close.png" alt="Clear Filters" />
+            </span>
+            <span className="filter-color"> Color ({color})
+            <img onClick={resetColor} className="close-button" src="./images/Close.png" alt="Clear Filters" />
+            </span>
+            <span onClick={handleResetFilters}>Reset All</span>
+          </div>
+          
           {currentProducts.length === 0 ? (
             <div className="no-product"><img src="./images/no-product.png" alt="No products available" /></div>
           ) : (
