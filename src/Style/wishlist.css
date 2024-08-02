@@ -127,8 +127,8 @@ border: 1px solid #FF7770 ;
 
 }
 .wishlist-image{
-    width: 100px;
-    height: 100px;
+  width: 50%;
+    height: 50%;
     object-fit: contain;
     background-color: #f6f6f6;
     & img{
@@ -145,6 +145,9 @@ border: 1px solid #FF7770 ;
 display: flex;
 flex-wrap: wrap;
     }
+    .wishlist-image{
+        width: 70%;
+        height: 70%;}
     .wishlist-price,.Instock.desk,.OutOfStock.desk,.wishlist-delete{
         display: none !important;
     }
