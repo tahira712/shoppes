@@ -59,7 +59,7 @@ export const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink path to="/">
+            <NavLink path to="/tracking">
               Order Tracking
             </NavLink>
           </li>
