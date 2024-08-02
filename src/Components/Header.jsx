@@ -54,7 +54,7 @@ export const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink path to="/">
+            <NavLink path to="/wishlist">
               Wishlist
             </NavLink>
           </li>

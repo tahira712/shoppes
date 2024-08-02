@@ -9,6 +9,7 @@ import 'aos/dist/aos.css'; // Import the CSS
 import Shop from "./Pages/Shop";
 // import { SearchProvider } from './Components/SearchContext';
 import OrderTracking from "./Pages/OrderTracking";
+import WishList from "./Pages/WishList";
 const App = () => {
   return (
     <>
@@ -23,6 +24,8 @@ const App = () => {
           <Route path="/blogs/:id" element={<DetailBlog />}></Route>
           <Route path="/shop" element={<Shop />} />
           <Route path="/tracking" element={<OrderTracking />} />
+          <Route path="/wishlist" element={<WishList/>} />
+          <Route path="/wishlist/:id" element={<WishList/>} />
         </Routes>
         <Footer />
       </Router>

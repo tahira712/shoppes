@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "../Components/Header";
+import { Link } from "react-router-dom";
 import "../Style/details.css";
 import RelatedProducts from "../Components/RelatedProducts";
 import { NavLink } from "react-router-dom";
-import  DescriptionAndReviews  from "../Components/DescriptionAndReviews";
+import DescriptionAndReviews from "../Components/DescriptionAndReviews";
 import RatingReview from "../Components/RatingReview";
 const Details = () => {
   const [quantityDropdownOpen, setQuantityDropdownOpen] = useState(false);
@@ -33,7 +34,7 @@ const Details = () => {
     };
     getData();
   }, [id]);
-  const [rating, setRating] = useState(0)
+  const [rating, setRating] = useState(0);
   const product = products.find((a) => a.id == id);
 
   const [selectedImageDet, setSelectedImage] = useState(product?.images[0]);
@@ -44,7 +45,13 @@ const Details = () => {
   return (
     <div className="cont details">
       <Header />
-      <div className="details-images-desc" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1400">
+      <div
+        className="details-images-desc"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="1400"
+      >
         <div className="details-images">
           <div className="details-image-main">
             {product?.images && (
@@ -68,7 +75,7 @@ const Details = () => {
               ))}
           </div>
         </div>
-        <div className="details-desc" data-aos="fade-up" >
+        <div className="details-desc" data-aos="fade-up">
           <div className="details-text">
             <h1 className="title">{product?.name} </h1>
             <span className="sub-text">Men's Shoes</span>
@@ -76,17 +83,20 @@ const Details = () => {
               <span className="price">$ {product?.price}</span>
               {product?.rating && (
                 <span className="rating">
-                  <RatingReview rating={product?.rating} setRating={setRating} />
+                  <RatingReview
+                    rating={product?.rating}
+                    setRating={setRating}
+                  />
                 </span>
               )}
               {/* <span><RatingReview rating={product?.rating} setRating={setRating} /></span> */}
             </div>
             <div className="desc sub-text">
-            <p>{product?.description}</p>
+              <p>{product?.description}</p>
+            </div>
           </div>
-          </div>
-          
-          <div className="cart-div" >
+
+          <div className="cart-div">
             <div className="selects">
               <div
                 className="select select-quantity"
@@ -123,14 +133,16 @@ const Details = () => {
 
               <button className="wishlist">
                 <img src="/images/heart.svg" alt="" />{" "}
-                <span>Add to Wishlist</span>
+                <Link to={`/wishlist/${id}`}>
+                  <span>Add to Wishlist</span>
+                </Link>
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      <DescriptionAndReviews  />
+      <DescriptionAndReviews />
       <RelatedProducts />
     </div>
   );
