@@ -8,29 +8,13 @@ const WishList = () => {
   const [products, setProducts] = useState([]);
   const { id } = useParams();
 
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch("/products.json");
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      // Filter products based on ID or some other criteria
-      const filteredProducts = data.products.filter((product) => product.id === parseInt(id, 10));
-      setProducts(filteredProducts);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setProducts([]);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
-    if (id) {
-      fetchData();
-    }
+    const fetchWishlist = () => {
+      const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      setProducts(storedWishlist);
+      setLoading(false);
+    };
+    fetchWishlist();
   }, [id]);
 
   if (loading) {
@@ -38,7 +22,7 @@ const WishList = () => {
   }
 
   if (products.length === 0) {
-    return <div>Product not found or there was an error.</div>;
+    return <div>No products in wishlist.</div>;
   }
 
   return (
@@ -62,22 +46,22 @@ const WishList = () => {
             </label>
             <div className="wishlist-image">
               <img
-                src={product.images[0]}
+                src={product.images[0] || '/images/default-product.jpg'}
                 alt={product.name || "Product Image"}
               />
             </div>
           </div>
           <div className="fd">
-            <span>{product.name}</span>
-            <span className="category">{product.category}</span>
-            <span className="media">${product.price}</span>
-            <span className={   product.inStock ? " media Instock" : "media OutOfStock"}>
+            <span>{product.name || "No Name"}</span>
+            <span className="category">{product.category || "No Category"}</span>
+            <span className="media">${product.price || "0.00"}</span>
+            <span className={product.inStock ? "media Instock" : "media OutOfStock"}>
               {product.inStock ? "In stock" : "Out of Stock"}
             </span>
           </div>
-          <div className="wishlist-price">${product.price}</div>
+          <div className="wishlist-price">${product.price || "0.00"}</div>
           <div className="wishlist-stock">
-            <span className={product.inStock ? "Instock desk " : "OutOfStock desk"}>
+            <span className={product.inStock ? "Instock desk" : "OutOfStock desk"}>
               {product.inStock ? "In stock" : "Out of Stock"}
             </span>
           </div>
@@ -87,10 +71,9 @@ const WishList = () => {
           <div className="wishlist-delete">
             <img src="/images/delete.svg" alt="Delete" />
           </div>
-            <button className="wishlist-delete-button">Delete</button>
+          <button className="wishlist-delete-button">Delete</button>
         </div>
       ))}
-      
     </div>
   );
 };

@@ -14,7 +14,15 @@ const Details = () => {
   const toggleQuantityDropdown = () => {
     setQuantityDropdownOpen(!quantityDropdownOpen);
   };
-
+  const addToWishlist = () => {
+    if (product) {
+      const existingWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      if (!existingWishlist.find((item) => item.id === product.id)) {
+        existingWishlist.push(product);
+        localStorage.setItem("wishlist", JSON.stringify(existingWishlist));
+      }
+    }
+  };
   const toggleSizeDropdown = () => {
     setSizeDropdownOpen(!sizeDropdownOpen);
   };
@@ -134,7 +142,7 @@ const Details = () => {
               <button className="wishlist">
                 <img src="/images/heart.svg" alt="" />{" "}
                 <Link to={`/wishlist/${id}`}>
-                  <span>Add to Wishlist</span>
+                  <span onClick={addToWishlist}>Add to Wishlist</span>
                 </Link>
               </button>
             </div>
