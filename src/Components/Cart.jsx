@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../Style/cart.css";
 import "../Style/homepage.css";
 import { NavLink } from "react-router-dom";
+import useLocalStorage from "../hooks/useLocalStorage"; 
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useLocalStorage("cartItems", []);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const toggleCart = () => {
@@ -12,7 +13,7 @@ const Cart = () => {
   };
 
   const closeCart = () => {
-    if (cartItems.length === 0||isCartOpen) { // Simplified condition
+    if (cartItems.length === 0 || isCartOpen) { 
       setIsCartOpen(false);
       let cartoverlaycont = document.querySelector(".cart-overlay-cont");
       if (cartoverlaycont) {
@@ -24,13 +25,8 @@ const Cart = () => {
     }
   };
 
-  const fetchCartItems = () => {
-    const storedItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    setCartItems(storedItems);
-  };
-
   useEffect(() => {
-    fetchCartItems();
+    // Fetch cart items is now handled by the useLocalStorage hook
   }, []);
 
   const addItemToCart = (itemToAdd) => {
@@ -50,13 +46,11 @@ const Cart = () => {
     }
 
     setCartItems(updatedItems);
-    localStorage.setItem("cartItems", JSON.stringify(updatedItems));
   };
 
   const handleRemoveItem = (itemId) => {
     const updatedItems = cartItems.filter(item => item.id !== itemId);
     setCartItems(updatedItems);
-    localStorage.setItem("cartItems", JSON.stringify(updatedItems));
   };
 
   const getUniqueCartItems = () => {
@@ -105,25 +99,24 @@ const Cart = () => {
                 </div>
               ) : (
                 <div className="cart-items-cont">
-              {  uniqueCartItems.map((item) => (
+                  {uniqueCartItems.map((item) => (
                     <div key={item.id} className="cart-item">
-                    <img
-                      src="/images/close.svg"
-                      alt="Remove item"
-                      className="close close-small"
-                      onClick={() => handleRemoveItem(item.id)}
-                    />
-                    <div className="image-div">
-                      <img src={item.images[0]} alt={item.name} />
+                      <img
+                        src="/images/close.svg"
+                        alt="Remove item"
+                        className="close close-small"
+                        onClick={() => handleRemoveItem(item.id)}
+                      />
+                      <div className="image-div">
+                        <img src={item.images[0]} alt={item.name} />
+                      </div>
+                      <div className="cart-item-info">
+                        <p>{item.name}</p>
+                        <p>${item.price}</p>
+                        <p><span className="qnt-gray">QNT :</span> {item.quantity || 1}</p>
+                      </div>
                     </div>
-                    <div className="cart-item-info">
-                      <p>{item.name}</p>
-                      
-                      <p>${item.price}</p>
-                      <p><span className="qnt-gray"  >QNT :</span> {item.quantity || 1}</p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
                 </div>
               )}
             </div>

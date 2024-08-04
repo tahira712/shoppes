@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Header } from "../Components/Header";
 import "../Style/blogs.css";
 import ReactPaginate from "react-paginate";
-import Search from '../Components/Search'; // Import the new component
+import Search from '../Components/Search'; 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link, useParams } from "react-router-dom";

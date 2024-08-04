@@ -18,13 +18,9 @@ const WishList = () => {
   }, [id]);
 
   const addToCart = (product) => {
-    // Retrieve current cart items
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    // Add the new item
     const updatedCartItems = [...storedCartItems, product];
-    // Save updated cart to localStorage
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
-    // Optionally, you can notify the user or update the UI
     alert(`${product.name} added to cart!`);
   };
 

@@ -8,12 +8,13 @@
 .shop-container{
     display: grid;
     grid-template-columns: 1fr 3fr;
+    height: 100%;
 font-family: "Plus Jakarta Sans";
 
 }
 .shop-filter,.all-products{
     width: 100%;
-    height: 100%;
+    height: 100% !important;
 }
 .shop-filter{
     display: flex;
@@ -179,10 +180,11 @@ font-weight: 800;
   .close-filter{
     position: absolute;
     top: 100px;
-    right: 0px
+    right: 10px
   }
  
 }
+.shop span.filter-toggle-btn.close-filter{display: none;}
 .sort-by-container{
     position: relative;
 }
@@ -196,7 +198,9 @@ font-weight: 800;
 }
 @media (max-width: 768px) {
     .all-products{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
+        height: 100% !important;
+        overflow-y: scroll;
     }
    
 }
