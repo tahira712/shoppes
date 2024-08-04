@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { useContext } from "react";
 import BurgerMenu from "./BurgerMenu";
+import Cart from "./Cart";
 function openLogin() {
   let overlay = document.querySelector(".overlay");
   overlay.style.display = "block";
@@ -90,12 +91,7 @@ export const Header = () => {
             >
               <span>Login</span>
             </NavLink>
-            <div className="shop-circle">
-              <img src={"/images/shop.svg"} alt="" />
-            </div>
-            <div className="shop-circle-black">
-              <img src={"/images/shop-black.svg"} alt="" />
-            </div>
+           <Cart/>
           </li>
           <BurgerMenu />
         </ul>

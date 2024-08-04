@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Login from '../Pages/Login';
-
+import Cart from './Cart';
+import { Link } from 'react-router-dom';
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-
+let[isCartOpen,setIsCartOpen]=useState(false)
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     toggleOverlay();
@@ -67,7 +68,7 @@ const BurgerMenu = () => {
         <NavLink onClick={handleNavLinkClick} to="/wishlist">
           Wishlist
         </NavLink>
-        <NavLink onClick={handleNavLinkClick} to="/order-tracking">
+        <NavLink onClick={handleNavLinkClick} to="/tracking">
           Order Tracking
         </NavLink>
         <NavLink onClick={handleNavLinkClick} to="/blogs">
@@ -76,7 +77,9 @@ const BurgerMenu = () => {
         <NavLink to="/" onClick={openLogin}  > 
           Login
         </NavLink>
+     <Cart/>
       </div>
+    
       {isOpen && (
         <div className="overlay" onClick={toggleMenu}></div>
       )}

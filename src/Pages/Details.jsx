@@ -1,19 +1,61 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import { Header } from "../Components/Header";
-import { Link } from "react-router-dom";
 import "../Style/details.css";
 import RelatedProducts from "../Components/RelatedProducts";
-import { NavLink } from "react-router-dom";
 import DescriptionAndReviews from "../Components/DescriptionAndReviews";
 import RatingReview from "../Components/RatingReview";
+
 const Details = () => {
   const [quantityDropdownOpen, setQuantityDropdownOpen] = useState(false);
   const [sizeDropdownOpen, setSizeDropdownOpen] = useState(false);
   const { id } = useParams();
+  const [quantity, setQuantity] = useState(1); // Default quantity
+  const [products, setProducts] = useState([]);
+  const [selectedImageDet, setSelectedImage] = useState(null);
+  const [rating, setRating] = useState(0);
+
+  useEffect(() => {
+    // Fetch product data
+    fetch("/products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data.products));
+  }, [id]);
+
+  const product = products.find((a) => a.id == id);
+
+  useEffect(() => {
+    if (product) {
+      setSelectedImage(product.images[0]);
+    }
+  }, [product]);
+
   const toggleQuantityDropdown = () => {
     setQuantityDropdownOpen(!quantityDropdownOpen);
   };
+
+  const toggleSizeDropdown = () => {
+    setSizeDropdownOpen(!sizeDropdownOpen);
+  };
+
+  const handleQuantitySelect = (value) => {
+    setQuantity(value);
+    setQuantityDropdownOpen(false);
+  };
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+  };
+
+  const addToCart = () => {
+    if (product) {
+      const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      const updatedCartItems = [...storedCartItems, { ...product, quantity }];
+      localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+      alert(`${product.name} added to cart with quantity ${quantity}!`);
+    }
+  };
+
   const addToWishlist = () => {
     if (product) {
       const existingWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
@@ -22,32 +64,6 @@ const Details = () => {
         localStorage.setItem("wishlist", JSON.stringify(existingWishlist));
       }
     }
-  };
-  const toggleSizeDropdown = () => {
-    setSizeDropdownOpen(!sizeDropdownOpen);
-  };
-
-  const [quantity, setQuantity] = useState(1);
-  const handleQuantitySelect = (value) => {
-    setQuantity(value);
-    setQuantityDropdownOpen(false);
-  };
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const getData = () => {
-      fetch("/products.json")
-        .then((a) => a.json())
-        .then((a) => setProducts(a.products));
-    };
-    getData();
-  }, [id]);
-  const [rating, setRating] = useState(0);
-  const product = products.find((a) => a.id == id);
-
-  const [selectedImageDet, setSelectedImage] = useState(product?.images[0]);
-  const handleImageClick = (imageSrc) => {
-    setSelectedImage(imageSrc);
   };
 
   return (
@@ -64,19 +80,18 @@ const Details = () => {
           <div className="details-image-main">
             {product?.images && (
               <img
-                src={selectedImageDet ? selectedImageDet : product.images[0]}
-                alt=""
+                src={selectedImageDet || product.images[0]}
+                alt={product?.name || "Product Image"}
               />
             )}
           </div>
           <div className="details-images-small">
             {product?.images &&
               product.images.map((image, index) => (
-                <div className="details-image-small">
+                <div className="details-image-small" key={index}>
                   <img
                     src={image}
                     alt=""
-                    key={index}
                     onClick={() => handleImageClick(image)}
                   />
                 </div>
@@ -85,10 +100,10 @@ const Details = () => {
         </div>
         <div className="details-desc" data-aos="fade-up">
           <div className="details-text">
-            <h1 className="title">{product?.name} </h1>
+            <h1 className="title">{product?.name}</h1>
             <span className="sub-text">Men's Shoes</span>
             <div className="space-between">
-              <span className="price">$ {product?.price}</span>
+              <span className="price">${product?.price}</span>
               {product?.rating && (
                 <span className="rating">
                   <RatingReview
@@ -97,7 +112,6 @@ const Details = () => {
                   />
                 </span>
               )}
-              {/* <span><RatingReview rating={product?.rating} setRating={setRating} /></span> */}
             </div>
             <div className="desc sub-text">
               <p>{product?.description}</p>
@@ -111,39 +125,37 @@ const Details = () => {
                 onClick={toggleQuantityDropdown}
               >
                 <span>QNT</span>
-                <img src="/images/down.svg" alt="" />
+                <img src="/images/down.svg" alt="Dropdown" />
               </div>
               {quantityDropdownOpen && (
                 <div className="qty-dropdown">
-                  <span onClick={() => handleQuantitySelect(1)}>1</span>
-                  <span onClick={() => handleQuantitySelect(2)}>2</span>
-                  <span onClick={() => handleQuantitySelect(3)}>3</span>
-                  <span onClick={() => handleQuantitySelect(4)}>4</span>
+                  {[1, 2, 3, 4].map((qty) => (
+                    <span key={qty} onClick={() => handleQuantitySelect(qty)}>
+                      {qty}
+                    </span>
+                  ))}
                 </div>
               )}
 
               <div className="select select-size" onClick={toggleSizeDropdown}>
                 <span>SIZE</span>
-                <img src="/images/down.svg" alt="" />
+                <img src="/images/down.svg" alt="Dropdown" />
               </div>
               {sizeDropdownOpen && (
                 <div className="size-dropdown">
-                  <span>S</span>
-                  <span>M</span>
-                  <span>L</span>
-                  <span>XL</span>
+                  {['S', 'M', 'L', 'XL'].map((size) => (
+                    <span key={size}>{size}</span>
+                  ))}
                 </div>
               )}
             </div>
 
             <div className="buttons">
-              <button>Add To Bag</button>
+              <button onClick={addToCart}>Add To Bag</button>
 
               <button className="wishlist">
-                <img src="/images/heart.svg" alt="" />{" "}
-                <Link to={`/wishlist/${id}`}>
-                  <span onClick={addToWishlist}>Add to Wishlist</span>
-                </Link>
+                <img src="/images/heart.svg" alt="Wishlist" />
+                <span onClick={addToWishlist}>Add to Wishlist</span>
               </button>
             </div>
           </div>

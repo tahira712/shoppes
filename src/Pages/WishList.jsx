@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Header } from "../Components/Header";
 import "../Style/wishlist.css";
 import { useParams } from "react-router-dom";
@@ -17,14 +17,31 @@ const WishList = () => {
     fetchWishlist();
   }, [id]);
 
+  const addToCart = (product) => {
+    // Retrieve current cart items
+    const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    // Add the new item
+    const updatedCartItems = [...storedCartItems, product];
+    // Save updated cart to localStorage
+    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+    // Optionally, you can notify the user or update the UI
+    alert(`${product.name} added to cart!`);
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
 
   if (products.length === 0) {
-    return <div>No products in wishlist.</div>;
+    return <div className="wishlist cont"><Header/>
+    <div className="no-products"><img src="./images/no-product.png" alt="" /></div></div>;
   }
-
+  const handleRemoveItem = (index) => {
+    const updatedItems = products.filter((_, i) => i !== index);
+    setProducts(updatedItems);
+    console.log(updatedItems);
+    localStorage.setItem("wishlist", JSON.stringify(updatedItems));
+  };
   return (
     <div className="wishlist cont">
       <Header />
@@ -37,7 +54,7 @@ const WishList = () => {
         <div></div>
         <div></div>
       </div>
-      {products.map((product) => (
+      {products.map((product,index) => (
         <div key={product.id} className="grid-row">
           <div className="wishlist-check">
             <label className="container-check">
@@ -66,10 +83,15 @@ const WishList = () => {
             </span>
           </div>
           <div className="wishlist-cart">
-            <button className="add-to-cart">Add To Cart</button>
+            <button
+              className="add-to-cart"
+              onClick={() => addToCart(product)}
+            >
+              Add To Cart
+            </button>
           </div>
           <div className="wishlist-delete">
-            <img src="/images/delete.svg" alt="Delete" />
+            <img src="/images/delete.svg" alt="Delete"  onClick={() => handleRemoveItem(index)}/>
           </div>
           <button className="wishlist-delete-button">Delete</button>
         </div>

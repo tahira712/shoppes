@@ -159,3 +159,14 @@ input[type="checkbox"] {
         width: 70%;
     }
 }
+@media (max-width: 500px) {
+  .remember-password{
+    flex-direction: column;
+  }
+  .checkmark{
+    left: 3px !important;
+    width: 15px !important;
+    height: 15px !important;
+    top: 3px !important;
+  }
+}
