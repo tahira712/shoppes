@@ -12,7 +12,7 @@ const Cart = () => {
     setIsCartOpen(prevState => !prevState);
   };
 useEffect(() => {
-  addItemToCart(cartItems);
+ setCartItems(cartItems);
 },[cartItems])
   const closeCart = () => {
     if (cartItems.length === 0 || isCartOpen) { 
