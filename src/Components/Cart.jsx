@@ -11,7 +11,9 @@ const Cart = () => {
   const toggleCart = () => {
     setIsCartOpen(prevState => !prevState);
   };
-
+useEffect(() => {
+  addItemToCart(cartItems);
+},[cartItems])
   const closeCart = () => {
     if (cartItems.length === 0 || isCartOpen) { 
       setIsCartOpen(false);
