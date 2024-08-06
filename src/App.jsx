@@ -10,23 +10,13 @@ import 'aos/dist/aos.css'; // Import the CSS
 import Shop from "./Pages/Shop";
 import OrderTracking from "./Pages/OrderTracking";
 import WishList from "./Pages/WishList";
-import { createConnection } from './chat.js';
-
+import { Provider } from 'react-redux';
+import  store  from './redux/store';
 const App = () => {
-  const [serverUrl, setServerUrl] = useState('http://localhost:5173/');
-  const [roomId, setRoomId] = useState('defaultRoom'); // Set default or fetch from context
-
-  useEffect(() => {
-    const connection = createConnection(serverUrl, roomId);
-    connection.connect();
-    AOS.init(); // Initialize AOS here
-    return () => {
-      connection.disconnect();
-    };
-  }, [roomId, serverUrl]);
+ 
 
   return (
-    <>
+    <Provider store={store}>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -42,8 +32,12 @@ const App = () => {
         </Routes>
         <Footer />
       </Router>
-    </>
+    </Provider>
   );
 };
-
+AOS.init({
+  duration: 1000, // Duration of animations
+  once: true, // Whether animations should only happen once
+  // Other options you may want to use
+});
 export default App;
