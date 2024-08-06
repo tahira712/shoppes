@@ -87,7 +87,7 @@ form {
 font-weight: 600;
     }
 }
-.close{
+.login .close{
     position: absolute;
     right: 20px;
 }

@@ -8,20 +8,23 @@ import PriceRange from "../Components/PriceRange";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const [priceRange, setPriceRange] = useState([0, 2000]); 
+  const [priceRange, setPriceRange] = useState([0, 2000]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [category, setCategory] = useState("All");
   const [color, setColor] = useState("All");
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const itemsPerPage = 6;
 
   useEffect(() => {
-    fetch("/products.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data.products);
-        setFilteredProducts(data.products); 
-      });
+    const fetchProducts = async () => {
+      const response = await fetch("/products.json");
+      const data = await response.json();
+      setProducts(data.products);
+      setFilteredProducts(data.products);
+    };
+    
+    fetchProducts();
   }, []);
 
   useEffect(() => {
@@ -30,17 +33,18 @@ const Shop = () => {
     );
 
     if (category !== "All") {
-      updatedProducts = updatedProducts.filter(product => 
+      updatedProducts = updatedProducts.filter(product =>
         product.category.includes(category)
       );
     }
 
     if (color !== "All") {
-      updatedProducts = updatedProducts.filter(product => 
+      updatedProducts = updatedProducts.filter(product =>
         product.color === color
       );
     }
 
+    console.log("Filtered Products:", updatedProducts); // Debugging line
     setFilteredProducts(updatedProducts);
   }, [priceRange, category, color, products]);
 
@@ -57,47 +61,49 @@ const Shop = () => {
     setCategory(newCategory);
   };
 
-  const handleColorChange = (newColor) => {
-    setColor(newColor);
-  };
-
-  const handleResetFilters = () => {
-    setCategory("All");
-    setColor("All");
-    setPriceRange([0, 2000]);
-    setFilteredProducts(products);
+  const handleColorChange = (color) => {
+    setColor(color);
   };
 
   const handleClearFilters = () => {
-    setFilteredProducts(products);
     setCategory("All");
     setColor("All");
     setPriceRange([0, 2000]);
+    setFilteredProducts(products);
   };
-let resetCategory=()=>{
-  setCategory("All");
-}
-let resetColor=()=>{
-  setColor("All");
-  let colorSpan = document.querySelectorAll(".filter-color");
-  
-}
-  const openFilter = () => {
-    document.querySelector(".shop-filter").classList.toggle("close-filter");
-    
-  }
-let resetPriceRange=()=>{
-  setPriceRange([0, 2000]);
- 
-}
-const screenWidth = window.innerWidth;
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 990) {
+        setIsFilterOpen(false);
+      } else {
+        setIsFilterOpen(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); 
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const toggleFilter = () => {
+    setIsFilterOpen(prev => !prev);
+  };
+
   return (
     <div className="cont shop-cont">
       <Header />
-      <span onClick={openFilter} className={screenWidth < 990 ? ".filter-toggle-btn.close-filter" : ".filter-toggle-btn.active"}>Sort by :</span> 
- 
+      <div className="sort-by">
+        <span
+          onClick={toggleFilter}
+          className={`filter-toggle-btn ${isFilterOpen ? 'active' : 'close-filter'}`}
+        >
+          Sort by <img src="./images/down.svg" alt="" />
+        </span>
+      </div>
       <div className="shop-container">
-        <div className="shop-filter " >
+        <div className={`shop-filter ${isFilterOpen ? '' : 'close-filter'}`}>
           <h1 className="filter-title">All Products ({filteredProducts.length})</h1>
           <div className="shop-category">
             <span className="filter-title">Categories</span>
@@ -124,18 +130,29 @@ const screenWidth = window.innerWidth;
         </div>
         <div className="all-products">
           <div className="filters">
-            <span className="filter-category"> {category} ({products.filter(p => p.category.includes(category)).length}) 
-              <img onClick={resetCategory} className="close-button" src="./images/Close.png" alt="Clear Filters" />
-            </span>
-            <span className="filter-price"> $ {priceRange[0]} - $ {priceRange[1]}
-            <img onClick={resetPriceRange} className="close-button" src="./images/Close.png" alt="Clear Filters" />
-            </span>
-            <span className="filter-color"> Color ({color})
-            <img onClick={resetColor} className="close-button" src="./images/Close.png" alt="Clear Filters" />
-            </span>
-            <span onClick={handleResetFilters}>Reset All</span>
+            {category !== "All" && (
+              <span className="filter-category">
+                {category} ({products.filter(p => p.category.includes(category)).length})
+                <img onClick={() => setCategory("All")} className="close-button" src="./images/Close.png" alt="Clear Filters" />
+              </span>
+            )}
+            {priceRange[0] !== 0 || priceRange[1] !== 2000 && (
+              <span className="filter-price">
+                $ {priceRange[0]} - $ {priceRange[1]}
+                <img onClick={() => setPriceRange([0, 2000])} className="close-button" src="./images/Close.png" alt="Clear Filters" />
+              </span>
+            )}
+            {color !== "All" && (
+              <span className="filter-color">
+                Color ({color})
+                <img onClick={() => setColor("All")} className="close-button" src="./images/Close.png" alt="Clear Filters" />
+              </span>
+            )}
+            {color !== "All" || priceRange[0] !== 0 || priceRange[1] !== 2000 || category !== "All" ? (
+              <span onClick={handleClearFilters}>Clear All</span>
+            ) : null}
           </div>
-          
+
           {currentProducts.length === 0 ? (
             <div className="no-product"><img src="./images/no-product.png" alt="No products available" /></div>
           ) : (
@@ -148,7 +165,7 @@ const screenWidth = window.innerWidth;
                   <div className="product-details">
                     <div className="space-between">
                       <h3>{product.name}</h3>
-                      <span><span>$ </span>{product.price}</span>
+                      <span className="price-span"><span>$ </span>{product.price}</span>
                     </div>
                     <span>{product.category}</span>
                   </div>

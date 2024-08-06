@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { removeItem } from '../redux/cartSlice';
 import "../Style/cart.css";
 import "../Style/homepage.css";
@@ -24,16 +24,17 @@ const Cart = () => {
       });
       return Array.from(itemMap.values());
     };
-
+  
     setUniqueCartItems(computeUniqueCartItems());
   }, [cartItems]);
 
-  const toggleCart = () => setIsCartOpen(prev => !prev);
+  const toggleCart = () => {
+    setIsCartOpen(prev => !prev);
+    console.log("Cart is open:", isCartOpen);
+  };
 
   const closeCart = () => {
-    if (isCartOpen) {
-      setIsCartOpen(false);
-    }
+    setIsCartOpen(false);
   };
 
   const handleRemoveItem = (itemId) => {
@@ -60,13 +61,13 @@ const Cart = () => {
               src="/images/close.svg"
               alt="Close"
               className="close"
-              onClick={closeCart}
+              onClick={toggleCart}
             />
             <div className="cart-items">
               <h1 className="title-cart">Shopping Cart</h1>
               {cartItems.length === 0 ? (
                 <div className="no-product">
-                  <img src="/images/no-product.png" alt="No products" />
+                  <img src="/images/no-product.png" alt="No products"  />
                   <NavLink to="/shop">
                     <button className="checkout">Shop Now</button>
                   </NavLink>
@@ -106,7 +107,9 @@ const Cart = () => {
               </p>
               <div className="cart-buttons">
                 <button className="checkout">Checkout</button>
-                <button className="view-cart">View Cart</button>
+                <Link to="/wishlist">
+                  <button className="view-cart">View Wishlist</button>
+                </Link>
               </div>
             </div>
           </div>

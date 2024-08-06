@@ -1,5 +1,38 @@
 {
   "products": [
+    
+    {
+      "id": 1,
+      "title": "Product 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A justo turpis massa tristique augue dignissim volutpat. Quis ultricies eu libero tortor dictumst. Molestie laoreet ut aliquet feugiat a malesuada non neque. Viverra in mollis in consequat hendrerit. Ut tortor risus mi magna donec. Aenean eget vitae, sem convallis. Sit tempor sit eget facilisi diam congue phasellus eu. Sit sed dignissim sed massa orci. Lectus massa blandit maecenas dolor eget ornare. Egestas non leo et duis nec diam arcu, gravida viverra.",
+      "price": "19.99",
+      "inStock": true,
+      "images": [
+"/images/hero.png",
+"/images/im-1-rem.png",
+"/images/im-2-rem.png",
+"/images/im-3-rem.png"
+      ],
+      "color": "#D96D6D",
+      "rating": 4,
+      "quantity": 1,
+      "category": "Men's Shoes",
+      "name": "Nike Air Max INTRLK",
+      "reviews": [
+        {
+          "userName": "Ralph Edwards",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        },
+        {
+          "userName": "Kristen Watson",
+          "userImage": "https://i.namu.wiki/i/pYOrpdCECy9T2gt1_Pgf8iJEEqp-z_gJz8clGuMzTiAm_qrPTNuq86OL3MooT2n3vH5BZc0h2v6i8h0cMPkmPw.webp",
+          "review": "Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
+          "image": "https://hoopshype.com/wp-content/uploads/sites/92/2023/04/20403343.jpg?w=1200"
+        }
+      ]
+    },
     {
       "id": 4,
       "title": "Product 1",

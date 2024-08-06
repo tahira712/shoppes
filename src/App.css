@@ -5,3 +5,16 @@
   body{
     overflow: unset !important;
   }
+
+  header li span{
+    color: #100d22 !important;
+  }
+  .hero header ul li span{
+    color: #fff !important;
+  }
+  .hero .flex-column{
+    width: 50%;
+  }
+  .hero .qnt-gray{
+    color:#878690 !important;
+  }

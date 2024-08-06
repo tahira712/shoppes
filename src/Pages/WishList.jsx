@@ -1,60 +1,108 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem } from '../redux/cartSlice'; // Assuming you have an `addItem` action
 import { Header } from "../Components/Header";
 import "../Style/wishlist.css";
-import { useParams } from "react-router-dom";
 
 const WishList = () => {
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
-  const { id } = useParams();
+  const [selectedItems, setSelectedItems] = useState([]);
+  const cartItems = useSelector(state => state.cart.items);
 
+  // Fetch wishlist from localStorage
   useEffect(() => {
     const fetchWishlist = () => {
-      const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-      setProducts(storedWishlist);
-      setLoading(false);
+      try {
+        const storedWishlist = JSON.parse(localStorage.getItem("wishlistItems")) || [];
+        setProducts(storedWishlist);
+      } catch (error) {
+        console.error("Error fetching wishlist from localStorage", error);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchWishlist();
-  }, [id]);
+  }, []);
 
+  // Add product to cart
   const addToCart = (product) => {
-    const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const updatedCartItems = [...storedCartItems, product];
-    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+    dispatch(addItem({ ...product, quantity: 1 })); // Dispatch action to add item to cart
     alert(`${product.name} added to cart!`);
   };
 
+  // Remove product from wishlist
+  const handleRemoveItem = (index) => {
+    const updatedItems = products.filter((_, i) => i !== index);
+    setProducts(updatedItems);
+    localStorage.setItem("wishlistItems", JSON.stringify(updatedItems));
+  };
+
+  // Add all products to cart
+  const addAllToCart = () => {
+    products.forEach(product => dispatch(addItem({ ...product, quantity: 1 })));
+    alert('All items added to cart!');
+  };
+
+  // Add selected products to cart
+  const addSelectedToCart = () => {
+    selectedItems.forEach(index => {
+      const product = products[index];
+      dispatch(addItem({ ...product, quantity: 1 }));
+    });
+    alert('Selected items added to cart!');
+  };
+
+  // Handle item selection
+  const handleCheckboxChange = (index) => {
+    setSelectedItems(prevSelected => {
+      if (prevSelected.includes(index)) {
+        return prevSelected.filter(i => i !== index);
+      } else {
+        return [...prevSelected, index];
+      }
+    });
+  };
+
+  // Handle loading state
   if (loading) {
     return <div>Loading...</div>;
   }
 
+  // Handle empty wishlist
   if (products.length === 0) {
-    return <div className="wishlist cont"><Header/>
-    <div className="no-products"><img src="./images/no-product.png" alt="" /></div></div>;
+    return (
+      <div className="wishlist cont">
+        <Header />
+        <div className="no-products">
+          <img src="./images/no-product.png" alt="No products" />
+        </div>
+      </div>
+    );
   }
-  const handleRemoveItem = (index) => {
-    const updatedItems = products.filter((_, i) => i !== index);
-    setProducts(updatedItems);
-    console.log(updatedItems);
-    localStorage.setItem("wishlist", JSON.stringify(updatedItems));
-  };
+
   return (
     <div className="wishlist cont">
       <Header />
       <h1 className="title">WishList</h1>
       <div className="grid-header">
-        <div>Select All (2)</div>
+        <div>Select All ({products.length})</div>
         <div>Product Name</div>
         <div>Unit Price</div>
         <div>Stock Status</div>
         <div></div>
         <div></div>
       </div>
-      {products.map((product,index) => (
+      {products.map((product, index) => (
         <div key={product.id} className="grid-row">
           <div className="wishlist-check">
             <label className="container-check">
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                checked={selectedItems.includes(index)}
+                onChange={() => handleCheckboxChange(index)}
+              />
               <span className="checkmark"></span>
             </label>
             <div className="wishlist-image">
@@ -87,11 +135,20 @@ const WishList = () => {
             </button>
           </div>
           <div className="wishlist-delete">
-            <img src="/images/delete.svg" alt="Delete"  onClick={() => handleRemoveItem(index)}/>
+            <img
+              src="/images/delete.svg"
+              alt="Delete"
+              onClick={() => handleRemoveItem(index)}
+              className="delete-icon"
+            />
           </div>
-          <button className="wishlist-delete-button">Delete</button>
+          <button onClick={() => handleRemoveItem(index)} className="wishlist-delete-button">Delete</button>
         </div>
       ))}
+      <div className="buttons-wishlist">
+        <button className="check-out" onClick={addSelectedToCart}>Add Selected to Cart</button>
+        <button className="add-to-cart" onClick={addAllToCart}>Add All to Bag</button>
+      </div>
     </div>
   );
 };

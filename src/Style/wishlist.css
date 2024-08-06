@@ -137,6 +137,25 @@ border: 1px solid #FF7770 ;
         object-fit: contain;
     }
 }
+.buttons-wishlist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    flex-direction: column;
+    & button{
+        width: 100%;
+    }
+}
+.check-out{
+  padding: 20px 32px;
+  border-radius: 32px;
+background: var(--Main-Color-Black, #100D22);
+color: #fff;
+}
 .no-products{
   width: 100%;
   height: 100%;
@@ -146,13 +165,19 @@ border: 1px solid #FF7770 ;
   flex-direction: column;
   gap: 20px;
 }
-
+.wishlist-delete{
+  display: flex;
+  justify-content: flex-end;
+}
 @media (max-width: 990px) {
   .grid-header{
         display: none !important;
     }.grid-row{
 display: flex;
 flex-wrap: wrap;
+    }
+    .buttons-wishlist{
+      width: 100% !important ;
     }
     .wishlist-image{
         width: 70%;
