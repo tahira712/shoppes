@@ -52,6 +52,8 @@ const Details = () => {
 
   const handleImageClick = (imageSrc) => {
     setSelectedImage(imageSrc);
+    let x=document.querySelectorAll(".details-image-small");
+    x.style.classlist.add(".active");
   };
 
   const addToCart = () => {

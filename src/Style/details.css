@@ -123,6 +123,14 @@ line-height: normal;
 .details-desc{
   height: 85%;
 }
+.details-image-small.active
+{
+  border-radius: 2px;
+  border: 1px solid var(--Main-Color-Black, #DF3295);
+}
+.details-image-small:hover{
+border: 1px solid var(--Main-Color-Black, #DF3295);
+}
 @media (max-width: 990px) {
     .details .buttons button{
 width: 100% !important;
