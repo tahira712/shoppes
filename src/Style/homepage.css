@@ -96,6 +96,14 @@ margin-left: 10px;
 .details .shop-circle{
     /* display: none; */
 }
+.image.activeBorder{
+    border: 2px solid #DF3295;
+}
+.hero .buttons button:hover{
+    background-color: #25203e;
+    color: #fff;
+    cursor: pointer;
+}
 .details .shop-circle-black{
     display: flex;
 }
@@ -188,14 +196,14 @@ h1 {
     /* justify-content: flex-start; */
     justify-content: center;
    max-width: 300px;
-    left: 60%;
+    left: 0%;
     height: 250px;
     transform: rotate(-7.721deg);
     flex-shrink: 0;
 }
 
 .img img {
-    width: 80%;
+    width: 85%;
     /* height: 50%; */
 }
 
@@ -582,8 +590,10 @@ h1 {
         order: 1;
     }
     .img {
-        width: 70%;
-        left: 60%;
+        width: 100%;
+        position: relative;
+        left: 70% !important;
+        bottom: 100px !important;
     height: 170px !important;
 
     }
@@ -1095,12 +1105,13 @@ footer .input-button {
 
 .subscribe button {
     position: absolute;
-    right: 0;
+    right: 3px;
     border-radius: 100px;
     background: linear-gradient(142deg, #ab238f 0.94%, #df3295 34.4%, #fe9d9b 71.35%, #ff7770 100.91%);
     width: 40%;
     height: 54px;
     color: #fff;
+    border: 0;
     text-align: center;
     font-family: "Plus Jakarta Sans";
     font-size: 14px;

@@ -1,26 +1,34 @@
 import React, { useState, useEffect } from "react";
-import BurgerMenu from "./BurgerMenu";
-import { Header } from "./Header";
+import { useDispatch } from 'react-redux';
 import { NavLink } from "react-router-dom";
 import { addItem as addToCartItem } from '../redux/cartSlice'; 
-import { useDispatch } from 'react-redux';
+import { Header } from "./Header";
 
 const Hero = () => {
   const [quantityDropdownOpen, setQuantityDropdownOpen] = useState(false);
   const [sizeDropdownOpen, setSizeDropdownOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState('');
   const [selectedImage, setSelectedImage] = useState("../images/hero.png");
-  const [product, setProduct] = useState(null); // Initialize with null
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null); // Track the index of the selected image
+  const [product, setProduct] = useState(null);
   const dispatch = useDispatch();
 
-  const handleImageClick = (imageSrc) => {
+  const handleImageClick = (imageSrc, index, event) => {
     setSelectedImage(imageSrc);
+    setSelectedImageIndex(index); // Update the index of the selected image
+    
+    const allImages = document.querySelectorAll(".image");
+    allImages.forEach(img => img.classList.remove("activeBorder"));
+
+    const clickedImage = event.currentTarget;
+    clickedImage.classList.add("activeBorder");
   };
 
   const addToCart = () => {
     if (product) {
-      dispatch(addToCartItem({ ...product, quantity }));
-      alert(`${product.name} added to cart with quantity ${quantity}!`);
+      dispatch(addToCartItem({ ...product, quantity, size: selectedSize }));
+      alert(`${product.name} added to cart with quantity ${quantity} and size ${selectedSize}!`);
     }
   };
 
@@ -35,6 +43,11 @@ const Hero = () => {
   const handleQuantitySelect = (value) => {
     setQuantity(value);
     setQuantityDropdownOpen(false);
+  };
+
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
+    setSizeDropdownOpen(false);
   };
 
   const calculateTotalPrice = () => {
@@ -94,7 +107,7 @@ const Hero = () => {
                       className="select select-quantity"
                       onClick={toggleQuantityDropdown}
                     >
-                      <span>QNT</span>
+                      <span>{quantity === 1 ? 'QTY' : quantity }</span>
                       <img src="../images/down.svg" alt="Down Arrow" />
                     </div>
                     {quantityDropdownOpen && (
@@ -109,15 +122,14 @@ const Hero = () => {
                       className="select select-size"
                       onClick={toggleSizeDropdown}
                     >
-                      <span>SIZE</span>
+                      <span>{selectedSize === '' ? 'Size' : selectedSize}</span>
                       <img src="../images/down.svg" alt="Down Arrow" />
                     </div>
                     {sizeDropdownOpen && (
                       <div className="size-dropdown">
-                        <span>S</span>
-                        <span>M</span>
-                        <span>L</span>
-                        <span>XL</span>
+                        {['S', 'M', 'L', 'XL'].map(size => (
+                          <span key={size} onClick={() => handleSizeSelect(size)}>{size}</span>
+                        ))}
                       </div>
                     )}
 
@@ -137,13 +149,12 @@ const Hero = () => {
                 {product?.images?.map((image, index) => (
                   <div
                     key={index}
-                    className="image"
-                    onClick={() => handleImageClick(image)}
+                    className={`image ${selectedImageIndex === index ? 'activeBorder' : ''}`}
+                    onClick={(e) => handleImageClick(image, index, e)}
                   >
                     <img src={image} alt={`Product Image ${index + 1}`} />
                   </div>
                 ))}
-               
               </div>
             </div>
           </div>

@@ -52,6 +52,12 @@ line-height: 24px; /* 171.429% */
 .categories{
     border-bottom: none !important;
 }
+.recent-posts,.popular-posts,.popular-author{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
 .recent-post{
     display: flex;
     gap: 10px;

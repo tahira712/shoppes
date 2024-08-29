@@ -6,7 +6,7 @@ import Details from "./Pages/Details";
 import Blog from "./Pages/Blog";
 import DetailBlog from "./Pages/DetailBlog";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import the CSS
+import 'aos/dist/aos.css'; 
 import Shop from "./Pages/Shop";
 import OrderTracking from "./Pages/OrderTracking";
 import WishList from "./Pages/WishList";

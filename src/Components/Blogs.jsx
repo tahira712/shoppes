@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Import Swiper styles
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const [swiperDirection, setSwiperDirection] = useState("horizontal");
@@ -48,7 +49,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="blogs"  data-aos="fade-up" data-aos-offset="1000" data-aos-easing="ease-in-sine" data-aos-duration="1600">
+    <div className="blogs" data-aos="fade-up" data-aos-offset="1000" data-aos-easing="ease-in-sine" data-aos-duration="1600">
       <div className="cont">
         <h1 className="title">Latest From Blogs</h1>
         <div className="sub">
@@ -56,8 +57,8 @@ const Blogs = () => {
         </div>
 
         <Swiper
-          spaceBetween={10} // Adjust as needed
-          slidesPerView={swiperDirection === 'vertical' ? 'auto' : 2} // Adjust based on direction
+          spaceBetween={10}
+          slidesPerView={swiperDirection === 'vertical' ? 'auto' : 2}
           direction={swiperDirection}
           breakpoints={{
             0: { slidesPerView: 1 },
@@ -69,17 +70,16 @@ const Blogs = () => {
         >
           {blogs.map((blog, index) => (
             <SwiperSlide key={index}>
-              <div className="blog"  >
-               
-                <div className="blog-img" >
-                  <img src={blog.image} alt="" />
+              <Link to={`/blogs/${blog.id}`} className="blog">
+                <div className="blog-img">
+                  <img src={blog.image} alt={blog.title} />
                 </div>
                 <div className="blog-description">
                   <div className="blog-title">{blog.title}</div>
                   <p className="blog-desc">{blog.description}</p>
                   <div className="blog-author">
                     <div className="author-img">
-                      <img src={blog.authorImage} alt="" />
+                      <img src={blog.authorImage} alt={blog.authorName} />
                     </div>
                     <div className="author-name-date">
                       <div className="author-name">{blog.authorName}</div>
@@ -87,7 +87,7 @@ const Blogs = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

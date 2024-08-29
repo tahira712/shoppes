@@ -64,11 +64,10 @@ const Trending = () => {
             {products.slice(4).map((product) => (
               <SwiperSlide key={product.id}>
                 <div className="trend">
-                  <div className="product-description">
                   <Link to={`/details/${product.id}`}>
+                  <div className="product-description">
 
                   <img src={product.images[0]} alt="" />
-                  </Link>
                   </div>
                   <div className="prod-desc">
                     <div className="prod-name-price">
@@ -77,6 +76,7 @@ const Trending = () => {
                     </div>
                     <span className="prod-category">{product.category}</span>
                   </div>
+                  </Link>
                 </div>
               </SwiperSlide>
             ))}

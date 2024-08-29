@@ -14,6 +14,8 @@ const Details = () => {
   const [quantityDropdownOpen, setQuantityDropdownOpen] = useState(false);
   const [sizeDropdownOpen, setSizeDropdownOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState(''); // State for selected size
+  const [selectedQuantity, setSelectedQuantity] = useState(''); // State for selected size
   const [products, setProducts] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [rating, setRating] = useState(0);
@@ -50,16 +52,25 @@ const Details = () => {
     setQuantityDropdownOpen(false);
   };
 
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
+    setSizeDropdownOpen(false);
+  };
+
   const handleImageClick = (imageSrc) => {
     setSelectedImage(imageSrc);
-    let x=document.querySelectorAll(".details-image-small");
-    x.style.classlist.add(".active");
+    // Remove 'active' class from all thumbnails
+    document.querySelectorAll(".details-image-small").forEach(el => el.classList.remove("active"));
+    // Add 'active' class to the clicked thumbnail
+    document.querySelector(`img[src="${imageSrc}"]`).parentElement.classList.add("active");
   };
 
   const addToCart = () => {
-    if (product) {
-      dispatch(addToCartItem({ ...product, quantity }));
-      alert(`${product.name} added to cart with quantity ${quantity}!`);
+    if (product && selectedSize) {
+      dispatch(addToCartItem({ ...product, quantity, size: selectedSize }));
+      alert(`${product.name} added to cart with quantity ${quantity} and size ${selectedSize}!`);
+    } else {
+      alert('Please select a size before adding to cart.');
     }
   };
 
@@ -85,7 +96,7 @@ const Details = () => {
           </div>
           <div className="details-images-small">
             {product?.images.map((image, index) => (
-              <div className="details-image-small" key={index}>
+              <div className={`details-image-small ${selectedImage === image ? 'active' : ''}`} key={index}>
                 <img
                   src={image}
                   alt={`Thumbnail ${index}`}
@@ -121,7 +132,7 @@ const Details = () => {
                 className="select select-quantity"
                 onClick={toggleQuantityDropdown}
               >
-                <span>QNT</span>
+                <span>{quantity===1?"Qty":quantity}</span>
                 <img src="/images/down.svg" alt="Dropdown" />
               </div>
               {quantityDropdownOpen && (
@@ -135,13 +146,15 @@ const Details = () => {
               )}
 
               <div className="select select-size" onClick={toggleSizeDropdown}>
-                <span>SIZE</span>
+                <span>{selectedSize || 'Size'}</span>
                 <img src="/images/down.svg" alt="Dropdown" />
               </div>
               {sizeDropdownOpen && (
                 <div className="size-dropdown">
                   {['S', 'M', 'L', 'XL'].map((size) => (
-                    <span key={size}>{size}</span>
+                    <span key={size} onClick={() => handleSizeSelect(size)}>
+                      {size}
+                    </span>
                   ))}
                 </div>
               )}
