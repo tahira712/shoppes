@@ -3,20 +3,20 @@ import { useDispatch } from 'react-redux';
 import { NavLink } from "react-router-dom";
 import { addItem as addToCartItem } from '../redux/cartSlice'; 
 import { Header } from "./Header";
-
+import { Toaster, toast } from 'react-hot-toast';
 const Hero = () => {
   const [quantityDropdownOpen, setQuantityDropdownOpen] = useState(false);
   const [sizeDropdownOpen, setSizeDropdownOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState('');
   const [selectedImage, setSelectedImage] = useState("../images/hero.png");
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null); // Track the index of the selected image
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null); 
   const [product, setProduct] = useState(null);
   const dispatch = useDispatch();
 
   const handleImageClick = (imageSrc, index, event) => {
     setSelectedImage(imageSrc);
-    setSelectedImageIndex(index); // Update the index of the selected image
+    setSelectedImageIndex(index); 
     
     const allImages = document.querySelectorAll(".image");
     allImages.forEach(img => img.classList.remove("activeBorder"));
@@ -28,7 +28,7 @@ const Hero = () => {
   const addToCart = () => {
     if (product) {
       dispatch(addToCartItem({ ...product, quantity, size: selectedSize }));
-      alert(`${product.name} added to cart with quantity ${quantity} and size ${selectedSize}!`);
+      toast.success(`${product.name} added to cart !`);
     }
   };
 
@@ -75,6 +75,7 @@ const Hero = () => {
 
   return (
     <div>
+      <div><Toaster/></div>
       <div className="overlay"></div>
       <div className="hero">
         <span className="overlay-text">Nike ZoomX Streakfly</span>

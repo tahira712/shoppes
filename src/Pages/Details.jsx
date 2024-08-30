@@ -8,7 +8,7 @@ import RatingReview from "../Components/RatingReview";
 import { useDispatch } from 'react-redux';
 import { addItem as addToCartItem } from '../redux/cartSlice'; 
 import { addItem as addToWishlistItem } from '../redux/wishlistSlice';
-
+import { Toaster, toast } from 'react-hot-toast';
 const Details = () => {
   const { id } = useParams();
   const [quantityDropdownOpen, setQuantityDropdownOpen] = useState(false);
@@ -59,30 +59,29 @@ const Details = () => {
 
   const handleImageClick = (imageSrc) => {
     setSelectedImage(imageSrc);
-    // Remove 'active' class from all thumbnails
     document.querySelectorAll(".details-image-small").forEach(el => el.classList.remove("active"));
-    // Add 'active' class to the clicked thumbnail
     document.querySelector(`img[src="${imageSrc}"]`).parentElement.classList.add("active");
   };
 
   const addToCart = () => {
     if (product && selectedSize) {
       dispatch(addToCartItem({ ...product, quantity, size: selectedSize }));
-      alert(`${product.name} added to cart with quantity ${quantity} and size ${selectedSize}!`);
+      toast.success(`${product.name} added to cart!`);
     } else {
-      alert('Please select a size before adding to cart.');
+      toast.error('Please select a size before adding to cart.');
     }
   };
 
   const addToWishlist = () => {
     if (product) {
       dispatch(addToWishlistItem({ ...product, quantity }));
-      alert(`${product.name} added to wishlist!`);
+     toast.success(`${product.name} added to wishlist!`);
     }
   };
 
   return (
     <div className="cont details">
+      <div><Toaster/></div>
       <Header />
       <div className="details-images-desc">
         <div className="details-images">

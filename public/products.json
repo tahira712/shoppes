@@ -13,7 +13,7 @@
 "/images/im-2-rem.png",
 "/images/im-3-rem.png"
       ],
-      "color": "#D96D6D",
+      "color": "pink",
       "rating": 4,
       "quantity": 1,
       "category": "Men's Shoes",
@@ -45,7 +45,7 @@
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f8c3ac46-6e48-4fad-a43d-7b01f2bdad09/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2e55231e-010e-4316-8653-36e2c66d2201/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png"
       ],
-      "color": "#e2dddd",
+      "color": "white",
       "rating": 4,
       "quantity": 1,
       "category": "Men's Shoes",
@@ -74,7 +74,7 @@
       "inStock": true,
       "quantity": 1,
 
-      "color": "#100D22",
+      "color": "black",
       "images": [
         "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/9f79fa8d-3a58-44ce-b823-c6936ccc65fc/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
         "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a5265394-2f00-4e7e-a263-f9b9d78ee736/air-max-alpha-trainer-6-mens-workout-shoes-LdprvV.png",
@@ -105,7 +105,7 @@
       "inStock": true,
       "quantity": 1,
 
-      "color": "#100D22",
+      "color": "black",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
       "price": "39.99",
       "images": [
@@ -136,7 +136,7 @@
       "id": 13,
       "title": "Product 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
-      "color": "#5848CA",
+      "color": "purple",
       "inStock": true,
       "quantity": 1,
 
@@ -170,7 +170,7 @@
       "id": 14,
       "title": "Product 2",
       "rating": 4,
-      "color": "#BA4164",
+      "color": "dark-pink",
       "inStock": false,
       "quantity": 1,
 
@@ -203,7 +203,7 @@
       "id": 15,
       "title": "Product 3",
       "rating": 4,
-      "color": "#aba7a7",
+      "color": "gray",
       "inStock": true,
       "quantity": 1,
 
@@ -236,7 +236,7 @@
       "id": 25,
       "title": "Product 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
-      "color": "#A8BD84",
+      "color": "olive",
       "inStock": false,
       "quantity": 1,
 
@@ -270,7 +270,7 @@
       "id": 26,
       "title": "Product 2",
       "rating": 4,
-      "color": "#BA4164",
+      "color": "dark-pink",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula turpis sed justo consectetur faucibus. Integer varius, sapien at tristique sollicitudin, nunc turpis commodo nisl, in tempus velit turpis non turpis. Donec id ultrices ligula. Nunc sit amet est eget lorem volutpat convallis nec in lacus.",
       "price": "29.99",
       "inStock": true,
@@ -303,7 +303,7 @@
       "id": 27,
       "title": "Product 3",
       "rating": 4,
-      "color": "#aba7a7",
+      "color": "gray",
       "inStock": true,
       "quantity": 1,
 
@@ -336,7 +336,7 @@
       "id": 28,
       "title": "Product 3",
       "rating": 4,
-      "color": "#aba7a7",
+      "color": "gray",
       "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
       "price": "39.99",
       "inStock": true,
@@ -369,7 +369,7 @@
       "id": 29,
       "title": "Product 3",
       "rating": 4,
-      "color": "#100D22",
+      "color": "black",
       "inStock": true,
       "quantity": 1,
 
@@ -402,7 +402,7 @@
       "id": 33,
       "title": "Product 3",
       "rating": 4,
-      "color": "#56A1AD",
+      "color": "pastel-blue",
       "description": "Whatever your 'why' is for working out, the Metcon 9 makes it all worth it. We improved on the 8 with a larger Hyperlift plate and added rubber rope wrap. Sworn by some of the greatest athletes in the world, intended for lifters, cross trainers, go-getters and it’s still the gold standard that delivers day after day.",
       "price": "39.99",
       "inStock": true,
@@ -435,7 +435,7 @@
       "id": 37,
       "title": "Product 3",
       "rating": 4,
-      "color": "#100D22",
+      "color": "black",
       "inStock": true,
       "quantity": 1,
 
@@ -468,7 +468,7 @@
       "id": 30,
       "title": "Product 3",
       "rating": 4,
-      "color": "#A8BD84",
+      "color": "olive",
       "inStock": true,
       "quantity": 1,
 
@@ -501,7 +501,7 @@
       "id": 31,
       "title": "Product 3",
       "rating": 4,
-      "color": "#e2dddd",
+      "color": "white",
       "inStock": true,
       "quantity": 1,
 
@@ -534,7 +534,7 @@
       "id": 32,
       "title": "Product 3",
       "rating": 4,
-      "color": "#e2dddd",
+      "color": "white",
       "inStock": true,
       "quantity": 1,
 

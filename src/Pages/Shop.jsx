@@ -63,8 +63,19 @@ const Shop = () => {
 
   const handleColorChange = (color) => {
     setColor(color);
+    let colorCircles = document.querySelectorAll(".color-circle");
+    colorCircles.forEach((circle) => {
+      circle.classList.remove("active");
+    });
+    if (color !== "All") {
+      document.querySelector(`.color-circle.${color}`).classList.add("active");
+    } else {
+      colorCircles.forEach((circle) => {
+        circle.classList.remove("active");
+      });
+    }
   };
-
+  
   const handleClearFilters = () => {
     setCategory("All");
     setColor("All");
@@ -116,14 +127,14 @@ const Shop = () => {
           <div className="filter-by-color">
             <span className="filter-title">Color</span>
             <div className="color-circles">
-              <div className="color-circle black" onClick={() => handleColorChange("#100D22")}></div>
-              <div className="color-circle gray" onClick={() => handleColorChange("#aba7a7")}></div>
-              <div className="color-circle pink" onClick={() => handleColorChange("#D96D6D")}></div>
-              <div className="color-circle dark-pink" onClick={() => handleColorChange("#BA4164")}></div>
-              <div className="color-circle pastel-blue" onClick={() => handleColorChange("#56A1AD")}></div>
-              <div className="color-circle purple" onClick={() => handleColorChange("#5848CA")}></div>
-              <div className="color-circle white" onClick={() => handleColorChange("#e2dddd")}></div>
-              <div className="color-circle olive" onClick={() => handleColorChange("#A8BD84")}></div>
+              <div className="color-circle black" onClick={() => handleColorChange("black")}></div>
+              <div className="color-circle gray" onClick={() => handleColorChange("gray")}></div>
+              <div className="color-circle pink" onClick={() => handleColorChange("pink")}></div>
+              <div className="color-circle dark-pink" onClick={() => handleColorChange("dark-pink")}></div>
+              <div className="color-circle pastel-blue" onClick={() => handleColorChange("pastel-blue")}></div>
+              <div className="color-circle purple" onClick={() => handleColorChange("purple")}></div>
+              <div className="color-circle white" onClick={() => handleColorChange("white")}></div>
+              <div className="color-circle olive" onClick={() => handleColorChange("olive")}></div>
               <div className="color-circle all" onClick={() => handleColorChange("All")}></div>
             </div>
           </div>

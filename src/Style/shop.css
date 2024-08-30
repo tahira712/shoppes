@@ -195,6 +195,9 @@ font-weight: 800;
  
  
 }
+.color-circle.active{
+    border: 2px solid #a137ad;
+}
  .filter-toggle-btn.active
   .close-filter{
     position: absolute;
