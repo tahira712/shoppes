@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../redux/cartSlice'; // Assuming you have an `addItem` action
 import { Header } from "../Components/Header";
 import "../Style/wishlist.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const WishList = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,6 @@ const WishList = () => {
   const [selectedItems, setSelectedItems] = useState([]);
   const cartItems = useSelector(state => state.cart.items);
 
-  // Fetch wishlist from localStorage
   useEffect(() => {
     const fetchWishlist = () => {
       try {
@@ -26,13 +26,11 @@ const WishList = () => {
     fetchWishlist();
   }, []);
 
-  // Add product to cart
   const addToCart = (product) => {
     dispatch(addItem({ ...product, quantity: 1 })); // Dispatch action to add item to cart
-    alert(`${product.name} added to cart!`);
+    toast.success (`${product.name} added to cart!`);
   };
 
-  // Remove product from wishlist
   const handleRemoveItem = (index) => {
     const updatedItems = products.filter((_, i) => i !== index);
     setProducts(updatedItems);
@@ -42,7 +40,7 @@ const WishList = () => {
   // Add all products to cart
   const addAllToCart = () => {
     products.forEach(product => dispatch(addItem({ ...product, quantity: 1 })));
-    alert('All items added to cart!');
+    toast.success('All items added to cart!');
   };
 
   // Add selected products to cart
@@ -51,7 +49,7 @@ const WishList = () => {
       const product = products[index];
       dispatch(addItem({ ...product, quantity: 1 }));
     });
-    alert('Selected items added to cart!');
+    toast.success('Selected items added to cart!');
   };
 
   // Handle item selection
@@ -84,6 +82,7 @@ const WishList = () => {
 
   return (
     <div className="wishlist cont">
+      <Toaster/>
       <Header />
       <h1 className="title">WishList</h1>
       <div className="grid-header">

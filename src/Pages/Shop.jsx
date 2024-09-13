@@ -139,8 +139,8 @@ const Shop = () => {
             </div>
           </div>
         </div>
-        <div className="all-products">
-          <div className="filters">
+       <div>
+       <div className="filters">
             {category !== "All" && (
               <span className="filter-category">
                 {category} ({products.filter(p => p.category.includes(category)).length})
@@ -163,6 +163,7 @@ const Shop = () => {
               <span onClick={handleClearFilters}>Clear All</span>
             ) : null}
           </div>
+        <div className="all-products">
 
           {currentProducts.length === 0 ? (
             <div className="no-product"><img src="./images/no-product.png" alt="No products available" /></div>
@@ -185,6 +186,7 @@ const Shop = () => {
             ))
           )}
         </div>
+       </div>
       </div>
       <ReactPaginate
         pageCount={pageCount}
