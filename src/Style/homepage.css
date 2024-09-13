@@ -128,7 +128,9 @@ header ul {
     display: flex;
     gap: 20px;
 }
-
+header ul li{
+    color: #100D22 !important;
+}
 .container {
     width: 100%;
     margin: 0 auto;
